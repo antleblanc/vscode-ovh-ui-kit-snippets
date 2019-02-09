@@ -1,0 +1,639 @@
+{
+  "oui-action-menu": {
+    "scope": "html",
+    "prefix": "oui-action-menu",
+    "body": [
+      "<oui-action-menu data-text=\"${1:Actions}\">",
+      "\t<oui-action-menu-item href=\"${2:#}\">${3:Action 1 (link)}</oui-action-menu-item>",
+      "\t<oui-action-menu-item data-on-click=\"\\$ctrl.${4:onActionClick()}\">${5:Action 2 (button)}</oui-action-menu-item>",
+      "\t<oui-action-menu-item data-disabled>${6:Action 3 (disabled)}</oui-action-menu-item>",
+      "\t<oui-action-menu-divider></oui-action-menu-divider>",
+      "\t<oui-action-menu-item",
+      "\t\thref=\"${7:#}\"",
+      "\t\tdata-external>",
+      "\t\t${8:External link}",
+      "\t</oui-action-menu-item>",
+      "</oui-action-menu>"
+    ],
+    "description": "oui-action-menu"
+  },
+  "oui-autocomplete": {
+    "scope": "html",
+    "prefix": "oui-autocomplete",
+    "body": [
+      "<input",
+      "\ttype=\"text\"",
+      "\tclass=\"oui-input oui-input_inline\"",
+      "\tplaceholder=\"${1:Search country name}\"",
+      "\tdata-ng-model=\"\\$ctrl.${2:modelStrings}\"",
+      "\tdata-oui-autocomplete=\"\\$ctrl.${3:suggestionStrings}\">"
+    ],
+    "description": "oui-autocomplete"
+  },
+  "oui-back-button": {
+    "scope": "html",
+    "prefix": "oui-back-button",
+    "body": ["<oui-back-button href=\"${1:#}\">${2:Title}</oui-back-button>"],
+    "description": "oui-back-button"
+  },
+  "oui-button": {
+    "scope": "html",
+    "prefix": "oui-button",
+    "body": [
+      "<oui-button",
+      "\tdata-variant=\"${1:primary}\"",
+      "\tdata-on-click=\"${2:onClick}()\">",
+      "\t${3:Default button}",
+      "</oui-button>"
+    ],
+    "description": "oui-button"
+  },
+  "oui-calendar": {
+    "scope": "html",
+    "prefix": "oui-calendar",
+    "body": [
+      "<oui-calendar",
+      "\tid=\"${1:foo}\"",
+      "\tname=\"${2:bar}\"",
+      "\tdata-model=\"\\$ctrl.${3:defaultModel}\"",
+      "\tplaceholder=\"${4:YYYY-MM-DD}\">",
+      "</oui-calendar>"
+    ],
+    "description": "oui-calendar"
+  },
+  "oui-checkbox": {
+    "scope": "html",
+    "prefix": "oui-checkbox",
+    "body": ["<oui-checkbox data-model=\"\\$ctrl.${1:checked}\">${2:Normal}</oui-checkbox>"],
+    "description": "oui-checkbox"
+  },
+  "oui-chips": {
+    "scope": "html",
+    "prefix": "oui-chips",
+    "body": [
+      "<oui-chips",
+      "\tdata-items=\"\\$ctrl.${1:items}\"",
+      "\tdata-stacked",
+      "\tdata-closable>",
+      "</oui-chips>"
+    ],
+    "description": "oui-chips"
+  },
+  "oui-clipboard": {
+    "scope": "html",
+    "prefix": "oui-clipboard",
+    "body": ["<oui-clipboard data-model=\"\\$ctrl.${1:simpleModel}\"></oui-clipboard>"],
+    "description": "oui-clipboard"
+  },
+  "oui-collapsible": {
+    "scope": "html",
+    "prefix": "oui-collapsible",
+    "body": [
+      "<oui-collapsible",
+      "\taria-label=\"${1:Action}\"",
+      "\tdata-heading=\"${2:Title}\"",
+      "\tdata-expanded=\"true\">",
+      "</oui-collapsible>"
+    ],
+    "description": "oui-collapsible"
+  },
+  "oui-criteria": {
+    "scope": "html",
+    "prefix": "oui-criteria",
+    "body": [
+      "<oui-criteria",
+      "\tdata-model=\"\\$ctrl.${1:basicModel}\"",
+      "\tdata-properties=\"\\$ctrl.${2:inputValue}\"",
+      "\tdata-searchable>",
+      "</oui-criteria>"
+    ],
+    "description": "oui-criteria"
+  },
+  "oui-dropdown": {
+    "scope": "html",
+    "prefix": "oui-dropdown",
+    "body": [
+      "<oui-dropdown>",
+      "\t<oui-dropdown-trigger data-text=\"${1:Actions}\"></oui-dropdown-trigger>",
+      "\t<oui-dropdown-content>",
+      "\t\t<oui-dropdown-group data-label=\"${2:Lorem ipsum}\">",
+      "\t\t\t<oui-dropdown-item data-on-click=\"\\$ctrl.${3:onActionClick()}\">${4:Action 1 (button)}</oui-dropdown-item>",
+      "\t\t\t<oui-dropdown-item href=\"${5:#}\">${6:Action 2 (link/href)}</oui-dropdown-item>",
+      "\t\t</oui-dropdown-group>",
+      "\t\t<oui-dropdown-group data-label=\"${7:Dolor sit amet}\">",
+      "\t\t\t<oui-dropdown-item data-disabled>${8:Action 3 (disabled)}</oui-dropdown-item>",
+      "\t\t\t<oui-dropdown-item data-state=\"${9:showcase.oui-angular}\">${10:Action 4 (link/state)}</oui-dropdown-item>",
+      "\t\t</oui-dropdown-group>",
+      "\t\t<oui-dropdown-divider></oui-dropdown-divider>",
+      "\t\t<oui-dropdown-item",
+      "\t\t\thref=\"${11:#}\"",
+      "\t\t\tdata-external>",
+      "\t\t\t${12:External link}",
+      "\t\t</oui-dropdown-item>",
+      "\t\t<oui-dropdown-item",
+      "\t\t\thref=\"${13:#}\"",
+      "\t\t\tdata-sticky>",
+      "\t\t\t${14:Start guided tour}",
+      "\t\t</oui-dropdown-item>",
+      "\t</oui-dropdown-content>",
+      "</oui-dropdown>"
+    ],
+    "description": "oui-dropdown"
+  },
+  "oui-dual-list": {
+    "scope": "html",
+    "prefix": "oui-dual-list",
+    "body": [
+      "<oui-dual-list",
+      "\tdata-source=\"$ctrl.${1:sourceStrings}\"",
+      "\tdata-target=\"\\$ctrl.${2:targetStrings}\">",
+      "\t<oui-dual-list-source data-searchable></oui-dual-list-source>",
+      "\t<oui-dual-list-target></oui-dual-list-target>",
+      "</oui-dual-list>"
+    ],
+    "description": "oui-dual-list"
+  },
+  "oui-field": {
+    "scope": "html",
+    "prefix": "oui-field",
+    "body": [
+      "<oui-field",
+      "\tdata-label=\"${1:Lastname}\"",
+      "\tdata-help-text=\"${2:At least 3 chars}\"",
+      "\tdata-size=\"${3:xl}\">",
+      "\t<input",
+      "\t\tclass=\"oui-input\"",
+      "\t\ttype=\"text\"",
+      "\t\tid=\"lastname\"",
+      "\t\tname=\"lastname\"",
+      "\t\tdata-ng-model=\"\\$ctrl.${4:user.lastname}\"",
+      "\t\trequired",
+      "\t\tminlength=\"3\"",
+      "\t\tmaxlength=\"32\">",
+      "</oui-field>"
+    ],
+    "description": "oui-field"
+  },
+  "oui-file": {
+    "scope": "html",
+    "prefix": "oui-file",
+    "body": [
+      "<oui-file",
+      "\tdata-model=\"\\$ctrl.${1:modelBasic}\"",
+      "\tplaceholder=\"${2:Placeholder example}\">",
+      "</oui-file>"
+    ],
+    "description": "oui-file"
+  },
+  "oui-guide-menu": {
+    "scope": "html",
+    "prefix": "oui-guide-menu",
+    "body": [
+      "<oui-guide-menu",
+      "\tdata-text=\"${1:Guides}\"",
+      "\tdata-align=\"${2:start}\">",
+      "\t<oui-guide-menu-group data-label=\"${3:Section 1}\">",
+      "\t\t<oui-guide-menu-item href=\"${4:#}\">${5:Guide 1 (link)}</oui-guide-menu-item>",
+      "\t\t<oui-guide-menu-item data-on-click=\"\\$ctrl.${6:onActionClick()}\">${7:Guide 2 (button)}</oui-guide-menu-item>",
+      "\t</oui-guide-menu-group>",
+      "\t<oui-guide-menu-group data-label=\"${8:Section 2}\">",
+      "\t\t<oui-guide-menu-item href=\"${9:#}\">${10:Guide 1 (link)}</oui-guide-menu-item>",
+      "\t\t<oui-guide-menu-item data-on-click=\"\\$ctrl.${11:onActionClick()}\">${12:Guide 2 (button)}</oui-guide-menu-item>",
+      "\t</oui-guide-menu-group>",
+      "\t<oui-guide-menu-divider></oui-guide-menu-divider>",
+      "\t<oui-guide-menu-item",
+      "\t\thref=\"${13:#}\"",
+      "\t\tdata-external>",
+      "\t\t${15:External link}",
+      "\t</oui-guide-menu-item>",
+      "</oui-guide-menu>"
+    ],
+    "description": "oui-guide-menu"
+  },
+  "oui-header-tabs": {
+    "scope": "html",
+    "prefix": "oui-header-tabs",
+    "body": [
+      "<oui-header-tabs>",
+      "\t<oui-header-tabs-item",
+      "\t\tdata-text=\"${1:Home}\"",
+      "\t\thref=\"${2:/#}\">",
+      "\t</oui-header-tabs-item>",
+      "\t<oui-header-tabs-item",
+      "\t\tdata-text=\"${3:Page Header}\"",
+      "\t\thref=\"${4:/#!/oui-angular/page-header}\">",
+      "\t</oui-header-tabs-item>",
+      "\t<oui-header-tabs-item",
+      "\t\tdata-text=\"${5:Header Tabs}\"",
+      "\t\thref=\"${6:/#!/oui-angular/header-tabs}\"",
+      "\t\tdata-active>",
+      "\t</oui-header-tabs-item>",
+      "\t<oui-header-tabs-item",
+      "\t\tdata-text=\"${7:Pagination}\"",
+      "\t\thref=\"${8:/#!/oui-angular/pagination}\">",
+      "\t</oui-header-tabs-item>",
+      "\t<oui-header-tabs-item",
+      "\t\tdata-text=\"${9:Datagrid}\"",
+      "\t\thref=\"${10:/#!/oui-angular/datagrid}\">",
+      "\t</oui-header-tabs-item>",
+      "</oui-header-tabs>"
+    ],
+    "description": "oui-header-tabs"
+  },
+  "oui-inline-adder": {
+    "scope": "html",
+    "prefix": "oui-inline-adder",
+    "body": [
+      "<oui-inline-adder>",
+      "\t<oui-inline-adder-row>",
+      "\t\t<oui-inline-adder-field>",
+      "\t\t\t<oui-field data-label=\"${1:Field 1}\">",
+      "\t\t\t\t<input",
+      "\t\t\t\t\ttype=\"text\"",
+      "\t\t\t\t\tclass=\"oui-input\"",
+      "\t\t\t\t\tname=\"${2:field1}\"",
+      "\t\t\t\t\tdata-ng-model=\"${3:field1}\"",
+      "\t\t\t\t\trequired>",
+      "\t\t\t</oui-field>",
+      "\t\t</oui-inline-adder-field>",
+      "\t</oui-inline-adder-row>",
+      "</oui-inline-adder>"
+    ],
+    "description": "oui-inline-adder"
+  },
+  "oui-message": {
+    "scope": "html",
+    "prefix": "oui-message",
+    "body": [
+      "<oui-message",
+      "\taria-close-button-label=\"${1:Close}\"",
+      "\tdata-type=\"${2:info}\"",
+      "\tdismissable>",
+      "\t${3:Message}",
+      "</oui-message>"
+    ],
+    "description": "oui-message"
+  },
+  "oui-modal": {
+    "scope": "html",
+    "prefix": "oui-modal",
+    "body": [
+      "<oui-modal",
+      "\tdata-heading=\"${1:Modal title}\"",
+      "\tdata-primary-action=\"${2:\\$ctrl.confirm = true}\"",
+      "\tdata-primary-label=\"${3:Ok}\"",
+      "\tdata-secondary-action=\"${4:\\$ctrl.cancel = true}\"",
+      "\tdata-secondary-label=\"${5:Cancel}\"",
+      "\tdata-loading=\"\\$ctrl.${6:loading}\"",
+      "\tdata-on-dismiss=\"${7:\\$ctrl.cancel = true}\">",
+      "\t${8:Modal content}",
+      "</oui-modal>"
+    ],
+    "description": "oui-modal"
+  },
+  "oui-navbar": {
+    "scope": "html",
+    "prefix": "oui-navbar",
+    "body": [
+      "<oui-navbar",
+      "\tdata-brand=\"\\$ctrl.${1:brand}\"",
+      "\tdata-active-link=\"${2:lorem}\"",
+      "\tdata-main-links=\"\\$ctrl.${3:mainLinks}\"",
+      "\tdata-aside-links=\"\\$ctrl.${4:asideLinks}\"",
+      "\tdata-toggler-links=\"\\$ctrl.${5:togglerLinks}\">",
+      "</oui-navbar>"
+    ],
+    "description": "oui-navbar"
+  },
+  "oui-numeric": {
+    "scope": "html",
+    "prefix": "oui-numeric",
+    "body": [
+      "<oui-numeric",
+      "\tmin=\"${1:2}\"",
+      "\tmax=\"${2:8}\"",
+      "\tdata-model=\"\\$ctrl.${3:size}\">",
+      "</oui-numeric>"
+    ],
+    "description": "oui-numeric"
+  },
+  "oui-page-header": {
+    "scope": "html",
+    "prefix": "oui-page-header",
+    "body": [
+      "<oui-page-header",
+      "\tdata-heading=\"${1:My title}\"",
+      "\tdata-description=\"${2:My subtitle}\">",
+      "</oui-page-header>"
+    ],
+    "description": "oui-page-header"
+  },
+  "oui-pagination": {
+    "scope": "html",
+    "prefix": "oui-pagination",
+    "body": [
+      "<oui-pagination",
+      "\tdata-current-offset=\"\\$ctrl.${1:pagination.offset}\"",
+      "\tdata-total-items=\"\\$ctrl.${2:pagination.totalItems}\"",
+      "\tdata-on-change=\"\\$ctrl.onChange(${3:'pagination', $event})\">",
+      "</oui-pagination>"
+    ],
+    "description": "oui-pagination"
+  },
+  "oui-password": {
+    "scope": "html",
+    "prefix": "oui-password",
+    "body": [
+      "<oui-password",
+      "\tdata-model=\"\\$ctrl.${1:modelBasic}\"",
+      "\tplaceholder=\"${2:Password}\">",
+      "</oui-password>"
+    ],
+    "description": "oui-password"
+  },
+  "oui-progress": {
+    "scope": "html",
+    "prefix": "oui-progress",
+    "body": [
+      "<oui-progress>",
+      "\t<oui-progress-bar",
+      "\t\tdata-type=\"${1:info}\"",
+      "\t\tdata-value=\"\\$ctrl.${2:progressData.value}\">",
+      "\t</oui-progress-bar>",
+      "</oui-progress>"
+    ],
+    "description": "oui-progress"
+  },
+  "oui-radio": {
+    "scope": "html",
+    "prefix": "oui-radio",
+    "body": [
+      "<oui-radio",
+      "\tdata-name=\"${1:oui-radio-1}\"",
+      "\tdata-model=\"\\$ctrl.${2:value1}\"",
+      "\tdata-value=\"${3:'a'}\">",
+      "\t${4:Value A}",
+      "</oui-radio>"
+    ],
+    "description": "oui-radio"
+  },
+  "oui-search": {
+    "scope": "html",
+    "prefix": "oui-search",
+    "body": [
+      "<oui-search",
+      "\tdata-model=\"\\$ctrl.${1:modelValue}\"",
+      "\tplaceholder=\"${2:Placeholder example}\">",
+      "</oui-search>"
+    ],
+    "description": "oui-search"
+  },
+  "oui-select": {
+    "scope": "html",
+    "prefix": "oui-select",
+    "body": [
+      "<oui-select",
+      "\tdata-name=\"${1:letter}\"",
+      "\tdata-model=\"\\$ctrl.${2:modelBasicString}\"",
+      "\tplaceholder=\"${3:Select a letter...}\"",
+      "\tdata-items=\"${4:['a', 'b', 'c']}\">",
+      "</oui-select>"
+    ],
+    "description": "oui-select"
+  },
+  "oui-select-picker": {
+    "scope": "html",
+    "prefix": "oui-select-picker",
+    "body": ["<oui-select-picker>"],
+    "description": "oui-select-picker"
+  },
+  "oui-skeleton": {
+    "scope": "html",
+    "prefix": "oui-skeleton",
+    "body": ["<oui-skeleton data-size=\"auto\"></oui-skeleton>"],
+    "description": "oui-skeleton"
+  },
+  "oui-slideshow": {
+    "scope": "html",
+    "prefix": "oui-slideshow",
+    "body": [
+      "<oui-slideshow>",
+      "\t<oui-slideshow-panel",
+      "\t\tdata-heading=\"${1:New feature}\"",
+      "\t\tdata-picture=\"${2:https://upload.wikimedia.org/wikipedia/commons/4/4a/Cercle_rouge_100%25.svg}\">",
+      "\t\t${3:Display your infrastructure as a list}",
+      "\t</oui-slideshow-panel>",
+      "\t<oui-slideshow-panel",
+      "\t\tdata-heading=\"${4:Introducing Ad-Sync}\"",
+      "\t\tdata-picture=\"${5:https://upload.wikimedia.org/wikipedia/commons/4/4a/Cercle_rouge_100%25.svg}\"",
+      "\t\thref=\"${6:http://www.ovh.com/}\"",
+      "\t\tdata-label=\"${7:Discover}\">",
+      "\t\t${8:Designed to help you synchronize your local Active Directory with your OVH Active Directory.}",
+      "\t</oui-slideshow-panel>",
+      "\t<oui-slideshow-panel",
+      "\t\tdata-heading=\"${9:New features available in your emails pages}\"",
+      "\t\thref=\"${10:http://www.ovh.com/}\"",
+      "\t\tdata-label=\"${11:Discover}\">",
+      "\t\t${12:Introducing Ad-Sync, designed to help you synchronize your local Active Directory with your OVH Active Directory.}",
+      "\t</oui-slideshow-panel>",
+      "\t<oui-slideshow-panel",
+      "\t\tdata-heading=\"${13:Introducing Ad-Sync}\"",
+      "\t\tdata-picture=\"${14:https://upload.wikimedia.org/wikipedia/commons/4/4a/Cercle_rouge_100%25.svg}\"",
+      "\t\thref=\"${15:http://www.ovh.com/}\"",
+      "\t\tdata-label=\"${16:Discover}\">",
+      "\t\t${17:Designed to help you synchronize your local Active Directory with your OVH Active Directory.}",
+      "\t</oui-slideshow-panel>",
+      "</oui-slideshow>"
+    ],
+    "description": "oui-slideshow"
+  },
+  "oui-spinner": {
+    "scope": "html",
+    "prefix": "oui-spinner",
+    "body": ["<oui-spinner data-size=\"m\"></oui-spinner>"],
+    "description": "oui-spinner"
+  },
+  "oui-stepper": {
+    "scope": "html",
+    "prefix": "oui-stepper",
+    "body": [
+      "<oui-stepper>",
+      "\t<oui-step-form",
+      "\t\tdata-header=\"${1:Simple step}\"",
+      "\t\tdata-description=\"${2:This is a description}\">",
+      "\t\t<oui-field",
+      "\t\t\tdata-label=\"${3:Email}\"",
+      "\t\t\tdata-size=\"${4:xl}\">",
+      "\t\t\t<input",
+      "\t\t\t\tclass=\"oui-input\"",
+      "\t\t\t\ttype=\"${5:email}\"",
+      "\t\t\t\tname=\"${5:email}\"",
+      "\t\t\t\tdata-ng-model=\"\\$ctrl.${6:user.email}\"",
+      "\t\t\t\trequired>",
+      "\t\t</oui-field>",
+      "\t\t<oui-field",
+      "\t\t\tdata-label=\"${7:Username}\"",
+      "\t\t\tdata-error-messages=\"{",
+      "\t\t\t\tpattern: ${8:'Username must be alphabetic with a length between 3 and 8.'}",
+      "\t\t\t\\}\"",
+      "\t\t\tdata-size=\"${9:xl}\">",
+      "\t\t\t<input",
+      "\t\t\t\tclass=\"oui-input\"",
+      "\t\t\t\ttype=\"${10:text}\"",
+      "\t\t\t\tname=\"${11:username}\"",
+      "\t\t\t\tdata-ng-model=\"\\$ctrl.${13:user.username}\"",
+      "\t\t\t\tdata-ng-pattern=\"${14:/^[a-zA-Z]{3,8\\}$/}\"",
+      "\t\t\t\trequired>",
+      "\t\t</oui-field>",
+      "\t</oui-step-form>",
+      "\t<oui-step-form",
+      "\t\tdata-header=\"${16:Skippable step}\"",
+      "\t\tdata-skippable",
+      "\t\tdata-description=\"${17:This is another description}\">",
+      "\t\t<oui-field",
+      "\t\t\tdata-label=\"${18:Firstname}\"",
+      "\t\t\tdata-size=\"${19:xl}\">",
+      "\t\t\t<input",
+      "\t\t\t\tclass=\"oui-input\"",
+      "\t\t\t\ttype=\"${20:text}\"",
+      "\t\t\t\tname=\"${21:firstname}\"",
+      "\t\t\t\tdata-ng-model=\"\\$ctrl.${22:user.firstname}\"",
+      "\t\t\t\tmaxlength=\"${23:32}\">",
+      "\t\t</oui-field>",
+      "\t\t<oui-field",
+      "\t\t\tdata-label=\"${24:Lastname}\"",
+      "\t\t\tdata-size=\"${25:xl}\">",
+      "\t\t\t<input",
+      "\t\t\t\tclass=\"oui-input\"",
+      "\t\t\t\ttype=\"${26:text}\"",
+      "\t\t\t\tname=\"${27:lastname}\"",
+      "\t\t\t\tdata-ng-model=\"\\$ctrl.${28:user.lastname}\"",
+      "\t\t\t\tmaxlength=\"${29:32}\">",
+      "\t\t</oui-field>",
+      "\t\t<oui-field",
+      "\t\t\tdata-label=\"${30:Description}\"",
+      "\t\t\tdata-size=\"${31:xl}\">",
+      "\t\t\t<oui-textarea",
+      "\t\t\t\tdata-model=\"\\$ctrl.${32:user.description}\"",
+      "\t\t\t\tdata-name=\"${33:description}\"",
+      "\t\t\t\tdata-placeholder=\"${34:Please insert your text...}\"",
+      "\t\t\t\tmaxlength=\"${35:10}\">",
+      "\t\t\t</oui-textarea>",
+      "\t\t</oui-field>",
+      "\t</oui-step-form>",
+      "\t<oui-step-form",
+      "\t\tdata-header=\"${36:Custom validation and navigation}\"",
+      "\t\tdata-navigation=\"\\$ctrl.${37:isValid}\"",
+      "\t\tdata-valid=\"\\$ctrl.${37:isValid}\">",
+      "\t\t<button",
+      "\t\t\tclass=\"oui-button\"",
+      "\t\t\ttype=\"button\"",
+      "\t\t\tdata-ng-class=\"{",
+      "\t\t\t\t'oui-button_primary': \\$ctrl.${37:isValid},",
+      "\t\t\t\t'oui-button_secondary': !\\$ctrl.${37:isValid}",
+      "\t\t\t\\}\"",
+      "\t\t\tdata-ng-click=\"\\$ctrl.isValid = !\\$ctrl.${37:isValid}\">",
+      "\t\t\t${38:Toggle navigation &amp; validation}",
+      "\t\t</button>",
+      "\t\t<oui-field",
+      "\t\t\tdata-label=\"${39:Lorem ipsum}\"",
+      "\t\t\tdata-size=\"${40:xl}\">",
+      "\t\t\t<input",
+      "\t\t\t\tclass=\"oui-input\"",
+      "\t\t\t\tname=\"${41:customValidationInput}\"",
+      "\t\t\t\ttype=\"${42:text}\"",
+      "\t\t\t\tautocomplete=\"${43:off}\"",
+      "\t\t\t\trequired",
+      "\t\t\t\tdata-ng-model=\"\\$ctrl.${44:skippableInput}\">",
+      "\t\t</oui-field>",
+      "\t</oui-step-form>",
+      "</oui-stepper>"
+    ],
+    "description": "oui-stepper"
+  },
+  "oui-switch": {
+    "scope": "html",
+    "prefix": "oui-switch",
+    "body": [
+      "<oui-switch",
+      "\tid=\"${1:switch}\"",
+      "\tname=\"${1:switch-name}\"",
+      "\tdata-model=\"${3:false}\">",
+      "</oui-switch>"
+    ],
+    "description": "oui-switch"
+  },
+  "oui-tabs": {
+    "scope": "html",
+    "prefix": "oui-tabs",
+    "body": [
+      "<oui-tabs>",
+      "\t<oui-tabs-item data-heading=\"${1:Basic1}\">",
+      "\t\t${2:<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet congue urna. Praesent ultricies id ex convallis dictum. Pellentesque malesuada faucibus consectetur. Quisque vehicula tincidunt leo, quis auctor nisi luctus quis. Etiam purus lectus, placerat vitae vehicula at, molestie nec erat. Duis enim odio, maximus at laoreet in, finibus nec mi. Nam ultrices, lacus vitae egestas volutpat, libero odio gravida turpis, vitae dapibus ex mi nec quam. Pellentesque a tempor nibh.</p>}",
+      "\t</oui-tabs-item>",
+      "\t<oui-tabs-item data-heading=\"${3:Basic2}\">",
+      "\t\t${4:<p>Proin egestas fermentum lectus nec euismod. Vivamus eu congue dui. Pellentesque sit amet pellentesque quam. Morbi posuere sem nec rutrum placerat. Vestibulum porttitor arcu eu risus tempor consectetur. Fusce aliquam bibendum aliquet. Morbi semper egestas iaculis. Ut sit amet sem et neque porta cursus pellentesque nec augue. Nullam semper in metus et luctus. Nunc molestie non ipsum a consequat. Etiam pellentesque laoreet lectus ut luctus. Nulla maximus, leo a mattis gravida, ligula felis vulputate libero, vitae fringilla nibh mauris nec dui. Fusce sed massa at arcu euismod dictum id sit amet lorem. Aliquam sed viverra sem, quis vehicula ligula. Vivamus blandit varius condimentum.</p>}",
+      "\t</oui-tabs-item>",
+      "\t<oui-tabs-item data-heading=\"${5:Basic3}\">",
+      "\t\t${6:<p>Duis egestas nulla at euismod semper. Nullam bibendum auctor viverra. Sed posuere neque nulla, id cursus nisi molestie vel. Nulla ornare elit sit amet congue faucibus. Aliquam eget lorem id justo ornare pretium in sit amet lectus. Sed maximus odio id porttitor rhoncus. Quisque pulvinar mauris ut sapien dictum, ultrices fermentum orci efficitur. Cras nec auctor ante. Aliquam ornare eleifend neque, at condimentum lacus aliquet elementum. Mauris mattis porttitor tortor vel vehicula. Phasellus venenatis nibh nec viverra sollicitudin. Ut lobortis mattis mauris, vel euismod nibh faucibus a.</p>}",
+      "\t</oui-tabs-item>",
+      "</oui-tabs>"
+    ],
+    "description": "oui-tabs"
+  },
+  "oui-textarea": {
+    "scope": "html",
+    "prefix": "oui-textarea",
+    "body": [
+      "<oui-textarea",
+      "\tid=\"${1:text}\"",
+      "\tname=\"${2:text}\"",
+      "\tplaceholder=\"${3:Please insert your text...}\"",
+      "\tdata-model=\"\\$ctrl.${4:text}\"",
+      "\tdata-rows=\"${5:7}\">",
+      "</oui-textarea>"
+    ],
+    "description": "oui-textarea"
+  },
+  "oui-tile": {
+    "scope": "html",
+    "prefix": "oui-tile",
+    "body": [
+      "<oui-tile data-heading=\"${1:Title}\">",
+      "\t<oui-tile-definition",
+      "\t\tdata-term=\"${2:Term}\"",
+      "\t\tdata-description=\"${3:This is a description}\">",
+      "\t</oui-tile-definition>",
+      "\t<oui-tile-definition data-term=\"${4:Term}\">",
+      "\t\t<oui-tile-description>${5:This is a description}</oui-tile-description>",
+      "\t</oui-tile-definition>",
+      "\t<oui-tile-definition",
+      "\t\tdata-term=\"${6:Term}\"",
+      "\t\tdata-term-popover=\"${7:This is a popover text}\"",
+      "\t\tdata-description=\"${8:This is a description}\">",
+      "\t</oui-tile-definition>",
+      "\t<oui-tile-definition",
+      "\t\tdata-term=\"${9:Term}\"",
+      "\t\tdata-description=\"${10:This is a description}\">",
+      "\t\t<oui-action-menu",
+      "\t\t\tdata-compact",
+      "\t\t\tdata-align=\"end\">",
+      "\t\t\t<oui-action-menu-item data-text=\"${11:Action 1}\"></oui-action-menu-item>",
+      "\t\t</oui-action-menu>",
+      "\t</oui-tile-definition>",
+      "</oui-tile>"
+    ],
+    "description": "oui-tile"
+  },
+  "oui-timepicker": {
+    "scope": "html",
+    "prefix": "oui-timepicker",
+    "body": [
+      "<oui-timepicker",
+      "\tdata-model=\"\\$ctrl.${1:placeholderModel}\"",
+      "\tplaceholder=\"${2:HH:MM}\">",
+      "</oui-timepicker>"
+    ],
+    "description": "oui-timepicker"
+  }
+}

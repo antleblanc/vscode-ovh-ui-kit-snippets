@@ -1,0 +1,37 @@
+{
+  "name": "vscode-ovh-ui-kit-snippets",
+  "publisher": "antleblanc",
+  "displayName": "vscode-ovh-ui-kit-snippets",
+  "description": "Collection of OVH UI Kit snippets",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antleblanc/vscode-ovh-ui-kit-snippets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/antleblanc/vscode-ovh-ui-kit-snippets/issues"
+  },
+  "homepage": "https://github.com/antleblanc/vscode-ovh-ui-kit-snippets#readme",
+  "version": "0.0.0",
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "angularjs",
+    "atom",
+    "ovh",
+    "snippets",
+    "ui-kit"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}
