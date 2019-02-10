@@ -268,7 +268,7 @@
       "<oui-message",
       "\taria-close-button-label=\"${1:Close}\"",
       "\tdata-type=\"${2:info}\"",
-      "\tdismissable>",
+      "\tdata-dismissable>",
       "\t${3:Message}",
       "</oui-message>"
     ],
