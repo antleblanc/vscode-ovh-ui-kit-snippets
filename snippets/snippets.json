@@ -404,7 +404,15 @@
   "oui-select-picker": {
     "scope": "html",
     "prefix": "oui-select-picker",
-    "body": ["<oui-select-picker>"],
+    "body": [
+      "<oui-select-picker",
+      "\tdata-name=\"${1:ouiSelectPicker1}\"",
+      "\tdata-match=\"${2:name}\"",
+      "\tdata-model=\"\\$ctrl.${3:value1}\"",
+      "\tdata-label=\"${4:Value A or B}\"",
+      "\tdata-values=\"${5:`[{id:'a', name: 'Value A'\\}, {id:'b', name: 'Value B'\\}`]}\">",
+      "</oui-select-picker>"
+    ],
     "description": "oui-select-picker"
   },
   "oui-skeleton": {
