@@ -1,3 +1,5 @@
+## 1.0.2 - Add icon
+
 ## 1.0.1 - Small bug fixes
 * oui-select-pick: add missing snippet
 * oui-message: add missing data prefix
