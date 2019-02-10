@@ -19,6 +19,11 @@
   "categories": [
     "Snippets"
   ],
+  "icon": "media/logo-ovh.png",
+  "galleryBanner": {
+    "color": "#113F6D",
+    "theme": "dark"
+  },
   "keywords": [
     "angularjs",
     "atom",
