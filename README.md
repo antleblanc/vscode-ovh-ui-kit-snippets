@@ -6,6 +6,12 @@
 
 [![OVH UI Kit documentation](https://github.com/antleblanc/vscode-ovh-ui-kit-snippets/raw/master/media/screenshot.png)](https://ovh-ux.github.io/ovh-ui-kit-documentation/#!/documentation/introduction)
 
+## Install
+
+```sh
+ext install antleblanc.vscode-ovh-ui-kit-snippets
+```
+
 ## Usage
 
 | Prefix              | Example                                                  | Source                                             |
