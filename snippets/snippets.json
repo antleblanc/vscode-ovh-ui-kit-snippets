@@ -145,7 +145,7 @@
     "prefix": "oui-dual-list",
     "body": [
       "<oui-dual-list",
-      "\tdata-source=\"$ctrl.${1:sourceStrings}\"",
+      "\tdata-source=\"\\$ctrl.${1:sourceStrings}\"",
       "\tdata-target=\"\\$ctrl.${2:targetStrings}\">",
       "\t<oui-dual-list-source data-searchable></oui-dual-list-source>",
       "\t<oui-dual-list-target></oui-dual-list-target>",
