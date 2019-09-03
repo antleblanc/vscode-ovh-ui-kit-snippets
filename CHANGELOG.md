@@ -1,3 +1,12 @@
+# [2.0.0](https://github.com/antleblanc/vscode-ovh-ui-kit-snippets/compare/v1.0.3...v2.0.0) (2019-09-03)
+
+
+### Features
+
+* **snippets:** upgrade to ovh-ui-kit v3 ([17e85d0](https://github.com/antleblanc/vscode-ovh-ui-kit-snippets/commit/17e85d0)), closes [#1](https://github.com/antleblanc/vscode-ovh-ui-kit-snippets/issues/1)
+
+
+
 ## [1.0.3](https://github.com/antleblanc/vscode-ovh-ui-kit-snippets/compare/v1.0.1...v1.0.3) (2019-02-11)
 
 
