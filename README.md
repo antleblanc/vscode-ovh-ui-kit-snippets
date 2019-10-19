@@ -2,8 +2,6 @@
 
 > Collection of OVH UI Kit snippets for Visual Studio Code.
 
-[![](https://github.com/antleblanc/vscode-ovh-ui-kit-snippets/raw/master/media/banner.png)](https://code.visualstudio.com)
-
 [![OVH UI Kit documentation](https://github.com/antleblanc/vscode-ovh-ui-kit-snippets/raw/master/media/screenshot.png)](https://ovh-ux.github.io/ovh-ui-kit-documentation/#!/documentation/introduction)
 
 **Disclaimer**: OVH UI Kit Snippets for Visual Studio Code it is not an official OVH product.
