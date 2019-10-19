@@ -19,9 +19,9 @@
   "categories": [
     "Snippets"
   ],
-  "icon": "media/logo-ovh.png",
+  "icon": "media/logo.png",
   "galleryBanner": {
-    "color": "#113F6D",
+    "color": "#434343",
     "theme": "dark"
   },
   "keywords": [
