@@ -2,7 +2,7 @@
   "name": "vscode-ovh-ui-kit-snippets",
   "publisher": "antleblanc",
   "displayName": "vscode-ovh-ui-kit-snippets",
-  "description": "Collection of OVH UI Kit snippets",
+  "description": "Collection of OVHcloud UI Kit snippets",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "angularjs",
     "atom",
     "ovh",
+    "ovhcloud",
     "snippets",
     "ui-kit"
   ],
