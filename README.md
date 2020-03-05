@@ -9,7 +9,7 @@
 ## Install
 
 ```sh
-ext install antleblanc.vscode-ovh-ui-kit-snippets
+$ ext install antleblanc.vscode-ovh-ui-kit-snippets
 ```
 
 ## Usage
