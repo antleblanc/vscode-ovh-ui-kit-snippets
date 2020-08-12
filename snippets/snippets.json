@@ -3,30 +3,45 @@
     "scope": "html",
     "prefix": "oui-action-menu",
     "body": [
-      "<oui-action-menu",
-      "\tdata-text=\"${1:Actions}\"",
-      "\tdata-disabled=\"\\$ctrl.${2:disabled}\">",
-      "\t<oui-action-menu-item data-on-click=\"\\$ctrl.${3:onActionClick('Action 1')}\">",
+      "<oui-action-menu text=\"${1:Actions}\" disabled=\"\\$ctrl.${2:disabled}\">",
+      "\t<oui-action-menu-item on-click=\"\\$ctrl.${3:onActionClick('Action 1')}\">",
       "\t\t${4:Action 1 (button)}",
       "\t</oui-action-menu-item>",
-      "\t<oui-action-menu-item",
-      "\t\tdata-on-click=\"\\$ctrl.${5:onActionClick('Action 2')}\"",
-      "\t\tdata-href=\"${6}\">",
+      "\t<oui-action-menu-item on-click=\"\\$ctrl.${5:onActionClick('Action 2')}\" href=\"${6:#}\">",
       "\t\t${7:Action 2 (link)}",
       "\t</oui-action-menu-item>",
       "\t<oui-action-menu-item ${8:disabled}>",
       "\t\t${9:Action 3 (disabled)}",
       "\t</oui-action-menu-item>",
       "\t<oui-action-menu-divider></oui-action-menu-divider>",
-      "\t<oui-action-menu-item",
-      "\t\tdata-on-click=\"\\$ctrl.${10:onActionClick('External link')}\"",
-      "\t\tdata-href=\"${11}\"",
-      "\t\tdata-external>",
+      "\t<oui-action-menu-item on-click=\"\\$ctrl.${10:onActionClick('External link')}\" href=\"${11:#}\" external>",
       "\t\t${12:External link}",
       "\t</oui-action-menu-item>",
       "</oui-action-menu>"
     ],
     "description": "oui-action-menu"
+  },
+  "oui-action-menu-compact": {
+    "scope": "html",
+    "prefix": "oui-action-menu-compact",
+    "body": [
+      "<oui-action-menu compact disabled=\"\\$ctrl.${1:disabled}\">",
+      "\t<oui-action-menu-item on-click=\"\\$ctrl.${2:onActionClick('Action 1')}\">",
+      "\t\t${3:Action 1 (button)}",
+      "\t</oui-action-menu-item>",
+      "\t<oui-action-menu-item on-click=\"\\$ctrl.${4:onActionClick('Action 2')}\" href=\"${5:#}\">",
+      "\t\t${6:Action 2 (link)}",
+      "\t</oui-action-menu-item>",
+      "\t<oui-action-menu-item ${7:disabled}>",
+      "\t\t${8:Action 3 (disabled)}",
+      "\t</oui-action-menu-item>",
+      "\t<oui-action-menu-divider></oui-action-menu-divider>",
+      "\t<oui-action-menu-item on-click=\"\\$ctrl.${9:onActionClick('External link')}\" href=\"${10:#}\" external>",
+      "\t\t${11:External link}",
+      "\t</oui-action-menu-item>",
+      "</oui-action-menu>"
+    ],
+    "description": "oui-action-menu-compact"
   },
   "oui-autocomplete": {
     "scope": "html",
@@ -37,8 +52,8 @@
       "\tclass=\"oui-input oui-input_inline\"",
       "\tplaceholder=\"${1:Search country name}\"",
       "\tdata-ng-model=\"\\$ctrl.${2:model}\"",
-      "\tdata-oui-autocomplete=\"\\$ctrl.${3:suggestions}\"",
-      "\tdata-oui-autocomplete-on-select=\"\\$ctrl.${4:onAutocomplete(value)}\">"
+      "\toui-autocomplete=\"\\$ctrl.${3:suggestions}\"",
+      "\toui-autocomplete-on-select=\"\\$ctrl.${4:onAutocomplete(value)}\">"
     ],
     "description": "oui-autocomplete"
   },
@@ -47,21 +62,229 @@
     "prefix": "oui-back-button",
     "body": [
       "<oui-back-button",
-      "\thref=\"${1}\"",
+      "\thref=\"${1:#}\"",
       "\taria-label=\"${2:Aria label for heading}\"",
-      "\tdata-on-click=\"\\$ctrl.${3:onClick()}\">",
+      "\ton-click=\"\\$ctrl.${3:onClick()}\">",
       "\t{{ \\$ctrl.${4:text} }}",
       "</oui-back-button>"
     ],
     "description": "oui-back-button"
   },
-  "oui-button": {
+  "oui-badge-default": {
     "scope": "html",
-    "prefix": "oui-button",
+    "prefix": "oui-badge-default",
     "body": [
-      "<oui-button aria-label=\"${1:Manage your servers}\">${1:Manage your servers}</oui-button>"
+      "<span class=\"oui-badge\">${1:Default}</span>"
     ],
-    "description": "oui-button"
+    "description": "oui-badge-default"
+  },
+  "oui-badge-info": {
+    "scope": "html",
+    "prefix": "oui-badge-info",
+    "body": [
+      "<span class=\"oui-badge oui-badge_info\">${1:Info}</span>"
+    ],
+    "description": "oui-badge-info"
+  },
+  "oui-badge-success": {
+    "scope": "html",
+    "prefix": "oui-badge-success",
+    "body": [
+      "<span class=\"oui-badge oui-badge_success\">${1:Success}</span>"
+    ],
+    "description": "oui-badge-success"
+  },
+  "oui-badge-warning": {
+    "scope": "html",
+    "prefix": "oui-badge-warning",
+    "body": [
+      "<span class=\"oui-badge oui-badge_warning\">${1:Warning}</span>"
+    ],
+    "description": "oui-badge-warning"
+  },
+  "oui-badge-error": {
+    "scope": "html",
+    "prefix": "oui-badge-error",
+    "body": [
+      "<span class=\"oui-badge oui-badge_error\">${1:Error}</span>"
+    ],
+    "description": "oui-badge-error"
+  },
+  "oui-badge-alpha": {
+    "scope": "html",
+    "prefix": "oui-badge-alpha",
+    "body": [
+      "<span class=\"oui-badge oui-badge_alpha\">${1:Alpha}</span>"
+    ],
+    "description": "oui-badge-alpha"
+  },
+  "oui-badge-beta": {
+    "scope": "html",
+    "prefix": "oui-badge-beta",
+    "body": [
+      "<span class=\"oui-badge oui-badge_beta\">${1:Beta}</span>"
+    ],
+    "description": "oui-badge-beta"
+  },
+  "oui-badge-new": {
+    "scope": "html",
+    "prefix": "oui-badge-new",
+    "body": [
+      "<span class=\"oui-badge oui-badge_new\">${1:New}</span>"
+    ],
+    "description": "oui-badge-new"
+  },
+  "oui-badge-soon": {
+    "scope": "html",
+    "prefix": "oui-badge-soon",
+    "body": [
+      "<span class=\"oui-badge oui-badge_soon\">${1:Soon}</span>"
+    ],
+    "description": "oui-badge-soon"
+  },
+  "oui-badge-promotion": {
+    "scope": "html",
+    "prefix": "oui-badge-promotion",
+    "body": [
+      "<span class=\"oui-badge oui-badge_promotion\">${1:Promotion}</span>"
+    ],
+    "description": "oui-badge-promotion"
+  },
+  "oui-badge-price-drop": {
+    "scope": "html",
+    "prefix": "oui-badge-price-drop",
+    "body": [
+      "<span class=\"oui-badge oui-badge_price-drop\">${1:Price Drop}</span>"
+    ],
+    "description": "oui-badge-price-drop"
+  },
+  "oui-badge-sold-out": {
+    "scope": "html",
+    "prefix": "oui-badge-sold-out",
+    "body": [
+      "<span class=\"oui-badge oui-badge_sold-out\">${1:SOLD OUT}</span>"
+    ],
+    "description": "oui-badge-sold-out"
+  },
+  "oui-badge-best-seller": {
+    "scope": "html",
+    "prefix": "oui-badge-best-seller",
+    "body": [
+      "<span class=\"oui-badge oui-badge_best-seller\">${1:Best Seller}</span>"
+    ],
+    "description": "oui-badge-best-seller"
+  },
+  "oui-badge-limited-edition": {
+    "scope": "html",
+    "prefix": "oui-badge-limited-edition",
+    "body": [
+      "<span class=\"oui-badge oui-badge_limited-edition\">${1:Limited Edition}</span>"
+    ],
+    "description": "oui-badge-limited-edition"
+  },
+  "oui-badge-delivery-120-seconds": {
+    "scope": "html",
+    "prefix": "oui-badge-delivery-120-seconds",
+    "body": [
+      "<span class=\"oui-badge oui-badge_delivery-120-seconds\">${1:120s}</span>"
+    ],
+    "description": "oui-badge-delivery-120-seconds"
+  },
+  "oui-badge-delivery-24-hours": {
+    "scope": "html",
+    "prefix": "oui-badge-delivery-24-hours",
+    "body": [
+      "<span class=\"oui-badge oui-badge_delivery-24-hours\">${1:24h}</span>"
+    ],
+    "description": "oui-badge-delivery-24-hours"
+  },
+  "oui-badge-delivery-72-hours": {
+    "scope": "html",
+    "prefix": "oui-badge-delivery-72-hours",
+    "body": [
+      "<span class=\"oui-badge oui-badge_delivery-72-hours\">${1:72h}</span>"
+    ],
+    "description": "oui-badge-delivery-72-hours"
+  },
+  "oui-badge-delivery-10-days": {
+    "scope": "html",
+    "prefix": "oui-badge-delivery-10-days",
+    "body": [
+      "<span class=\"oui-badge oui-badge_delivery-10-days\">${1:10d}</span>"
+    ],
+    "description": "oui-badge-delivery-10-days"
+  },
+  "oui-box": {
+    "scope": "html",
+    "prefix": "oui-box",
+    "body": [
+      "<div class=\"oui-box\">",
+      "\t<h4 class=\"oui-box__heading\">An awesome title for an awesome box</h4>",
+      "\t<p>",
+      "\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "\t\tSed tempus sapien erat, et molestie magna tristique non.",
+      "\t\tSed tincidunt eu augue tempor consectetur. Nullam iaculis,",
+      "\t\tnibh mollis vulputate elementum, neque est iaculis nisi,",
+      "\t\tet gravida turpis erat non dui. Nunc eget tortor et enim",
+      "\t\tinterdum euismod sed eget purus. Integer in metus ultrices,",
+      "\t\tultricies lacus in, fermentum nisi. Cras sed neque id dui",
+      "\t\tfermentum faucibus. Mauris mollis arcu justo, eget convallis",
+      "\t\tmassa volutpat ac.",
+      "\t</p>",
+      "</div>"
+    ],
+    "description": "oui-box"
+  },
+  "oui-box-light": {
+    "scope": "html",
+    "prefix": "oui-box-light",
+    "body": [
+      "<div class=\"oui-box oui-box_light\">",
+      "\t<h4 class=\"oui-box__heading\">An awesome title for an awesome box</h4>",
+      "\t<p>",
+      "\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "\t\tSed tempus sapien erat, et molestie magna tristique non.",
+      "\t\tSed tincidunt eu augue tempor consectetur. Nullam iaculis,",
+      "\t\tnibh mollis vulputate elementum, neque est iaculis nisi,",
+      "\t\tet gravida turpis erat non dui. Nunc eget tortor et enim",
+      "\t\tinterdum euismod sed eget purus. Integer in metus ultrices,",
+      "\t\tultricies lacus in, fermentum nisi. Cras sed neque id dui",
+      "\t\tfermentum faucibus. Mauris mollis arcu justo, eget convallis",
+      "\t\tmassa volutpat ac.",
+      "\t</p>",
+      "</div>"
+    ],
+    "description": "oui-box-light"
+  },
+  "oui-button-ghost": {
+    "scope": "html",
+    "prefix": "oui-button-ghost",
+    "body": [
+      "<oui-button variant=\"link\" disabled=\"\\$ctrl.${1:disabled}\">",
+      "\t${2:Call to action}",
+      "</oui-button>"
+    ],
+    "description": "oui-button-ghost"
+  },
+  "oui-button-primary": {
+    "scope": "html",
+    "prefix": "oui-button-primary",
+    "body": [
+      "<oui-button variant=\"primary\" disabled=\"\\$ctrl.${1:disabled}\">",
+      "\t${2:Call to action}",
+      "</oui-button>"
+    ],
+    "description": "oui-button-primary"
+  },
+  "oui-button-secondary": {
+    "scope": "html",
+    "prefix": "oui-button-secondary",
+    "body": [
+      "<oui-button variant=\"secondary\" disabled=\"\\$ctrl.${1:disabled}\">",
+      "\t${2:Call to action}",
+      "</oui-button>"
+    ],
+    "description": "oui-button-secondary"
   },
   "oui-calendar": {
     "scope": "html",
@@ -69,41 +292,113 @@
     "body": [
       "<oui-calendar",
       "\tdisabled=\"\\$ctrl.${1:disabled}\"",
-      "\tdata-model=\"\\$ctrl.${2:model}\"",
-      "\tdata-on-change=\"\\$ctrl.${3:onChange(selectedDates, dateStr)}\"",
-      "\tdata-on-close=\"\\$ctrl.${4:onClose(selectedDates, dateStr)}\"",
-      "\tdata-on-open=\"\\$ctrl.${5:onOpen(selectedDates, dateStr)}\"",
+      "\tmodel=\"\\$ctrl.${2:model}\"",
+      "\ton-change=\"\\$ctrl.${3:onChange(selectedDates, dateStr)}\"",
+      "\ton-close=\"\\$ctrl.${4:onClose(selectedDates, dateStr)}\"",
+      "\ton-open=\"\\$ctrl.${5:onOpen(selectedDates, dateStr)}\"",
       "\tplaceholder=\"${6:YYYY-MM-DD}\">",
       "</oui-calendar>"
     ],
     "description": "oui-calendar"
+  },
+  "oui-calendar-inline": {
+    "scope": "html",
+    "prefix": "oui-calendar-inline",
+    "body": [
+      "<oui-calendar",
+      "\tmodel=\"\\$ctrl.${1:model}\"",
+      "\tinline>",
+      "</oui-calendar>"
+    ],
+    "description": "oui-calendar-inline"
+  },
+  "oui-calendar-with-week-numbers": {
+    "scope": "html",
+    "prefix": "oui-calendar-with-week-numbers",
+    "body": [
+      "<oui-calendar",
+      "\tmodel=\"\\$ctrl.${1:model}\"",
+      "\tweek-numbers>",
+      "</oui-calendar>"
+    ],
+    "description": "oui-calendar-with-week-numbers"
+  },
+  "oui-calendar-limited-range-of-dates": {
+    "scope": "html",
+    "prefix": "oui-calendar-limited-range-of-dates",
+    "body": [
+      "<oui-calendar",
+      "\tmodel=\"\\$ctrl.${1:model}\"",
+      "\tmin-date=\"\\$ctrl.${2:minDate}\"",
+      "\tmax-date=\"\\$ctrl.${3:maxDate}\">",
+      "</oui-calendar>"
+    ],
+    "description": "oui-calendar-limited-range-of-dates"
+  },
+  "oui-calendar-enable-timepicker": {
+    "scope": "html",
+    "prefix": "oui-calendar-enable-timepicker",
+    "body": [
+      "<oui-calendar",
+      "\tmodel=\"\\$ctrl.${1:model}\"",
+      "\tformat=\"${2:Y-m-d H:i}\"",
+      "\tenable-time>",
+      "</oui-calendar>"
+    ],
+    "description": "oui-calendar-enable-timepicker"
   },
   "oui-checkbox": {
     "scope": "html",
     "prefix": "oui-checkbox",
     "body": [
       "<oui-checkbox",
-      "\taria-label=\"${1:Allow ponies in your server}\"",
-      "\tdata-model=\"\\$ctrl.${2:model2}\"",
-      "\tdata-on-change=\"\\$ctrl.${3:onChange(modelValue)}\">",
-      "\t${4:Allow ponies in your server}",
+      "\tdisabled=\"\\$ctrl.${1:disabled}\"",
+      "\tmodel=\"\\$ctrl.${2:model1}\"",
+      "\tname=\"${3:oui-checkbox-1}\"",
+      "\ton-change=\"\\$ctrl.${4:onChange(modelValue)}\"",
+      "\tvalue=\"\\$ctrl.${5:value1}\">",
+      "\t${6:Value A}",
       "</oui-checkbox>"
     ],
     "description": "oui-checkbox"
+  },
+  "oui-checkbox-thumbnail": {
+    "scope": "html",
+    "prefix": "oui-checkbox-thumbnail",
+    "body": [
+      "<oui-checkbox",
+      "\tdisabled=\"\\$ctrl.${1:disabled}\"",
+      "\tmodel=\"\\$ctrl.${2:model1}\"",
+      "\tname=\"${3:oui-checkbox-1}\"",
+      "\ton-change=\"\\$ctrl.${4:onChange(modelValue)}\"",
+      "\tvalue=\"\\$ctrl.${5:value1}\"",
+      "\tthumbnail>",
+      "\t${6:Value A}",
+      "</oui-checkbox>"
+    ],
+    "description": "oui-checkbox-thumbnail"
   },
   "oui-chips": {
     "scope": "html",
     "prefix": "oui-chips",
     "body": [
-      "<oui-chips data-items=\"\\$ctrl.${1:items}\"></oui-chips>"
+      "<oui-chips items=\"\\$ctrl.${1:items}\"></oui-chips>"
     ],
     "description": "oui-chips"
+  },
+  "oui-chips-stacked": {
+    "scope": "html",
+    "prefix": "oui-chips-stacked",
+    "body": [
+      "<oui-chips items=\"\\$ctrl.${1:items}\" stacked></oui-chips>"
+    ],
+    "description": "oui-chips-stacked"
   },
   "oui-clipboard": {
     "scope": "html",
     "prefix": "oui-clipboard",
     "body": [
-      "<oui-clipboard data-model=\"\\$ctrl.${2:model}\"></oui-clipboard>"
+      "<oui-clipboard model=\"\\$ctrl.${1:model}\"></oui-clipboard>"
     ],
     "description": "oui-clipboard"
   },
@@ -112,14 +407,48 @@
     "prefix": "oui-collapsible",
     "body": [
       "<oui-collapsible",
-      "\tdata-heading=\"${1:Title}\"",
+      "\theading=\"${1:Title}\"",
       "\taria-label=\"${2:Action}\"",
-      "\tdata-expanded=\"\\$ctrl.${3:expanded}\"",
-      "\tdata-on-toggle=\"\\$ctrl.${4:onToggle(expanded)}\">",
-      "\t${5:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper ligula nec fringilla tempor. In rhoncus ullamcorper feugiat. Phasellus vel ipsum vitae neque varius luctus. Proin id iaculis arcu. Fusce justo arcu, egestas vel nulla nec, dictum cursus lacus. Aenean elementum vel odio quis rutrum. In quis tellus in neque vulputate rhoncus vitae ut justo. Ut dignissim varius est in consequat. Donec nisi mauris, pellentesque condimentum congue in, blandit ut arcu. In et elit ipsum.}",
+      "\ton-toggle=\"\\$ctrl.${3:onToggle(expanded)}\">",
+      "\t${4:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper ligula nec fringilla tempor. In rhoncus ullamcorper feugiat. Phasellus vel ipsum vitae neque varius luctus. Proin id iaculis arcu. Fusce justo arcu, egestas vel nulla nec, dictum cursus lacus. Aenean elementum vel odio quis rutrum. In quis tellus in neque vulputate rhoncus vitae ut justo. Ut dignissim varius est in consequat. Donec nisi mauris, pellentesque condimentum congue in, blandit ut arcu. In et elit ipsum.}",
       "</oui-collapsible>"
     ],
     "description": "oui-collapsible"
+  },
+  "oui-collapsible-loading": {
+    "scope": "html",
+    "prefix": "oui-collapsible-loading",
+    "body": [
+      "<oui-collapsible",
+      "\theading=\"${1:Click to load content}\"",
+      "\tloading=\"\\$ctrl.${2:loading}\"",
+      "\taria-label=\"${3:Action}\"",
+      "\texpanded=\"\\$ctrl.${4:expanded}\"",
+      "\ton-toggle=\"\\$ctrl.${5:onToggle(expanded, this)}\">",
+      "\t<span data-ng-bind=\"\\$ctrl.${6:content}\"></span>",
+      "</oui-collapsible>"
+    ],
+    "description": "oui-collapsible-loading"
+  },
+  "oui-collapsible-group": {
+    "scope": "html",
+    "prefix": "oui-collapsible-group",
+    "body": [
+      "<oui-collapsible",
+      "\theading=\"${1:Title}\"",
+      "\tgroup=\"${2:lorem}\"",
+      "\ton-toggle=\"\\$ctrl.${3:onToggle('Collapsible 1', expanded)}\">",
+      "\t${4:Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam eveniet, commodi nisi officia iusto minus repellat magnam in vel? Nisi, ea? Nam cupiditate sint ullam temporibus perspiciatis, nostrum pariatur amet?}",
+      "</oui-collapsible>",
+      "",
+      "<oui-collapsible",
+      "\theading=\"${5:Title}\"",
+      "\tgroup=\"${2:lorem}\"",
+      "\ton-toggle=\"\\$ctrl.${6:onToggle('Collapsible 2', expanded)}\">",
+      "\t${7:Corporis dicta porro labore repellendus accusantium. Aperiam dolore velit corrupti ex accusantium nihil doloremque rerum voluptate reprehenderit cum molestias cumque mollitia obcaecati, est saepe quod dolorum magni non quidem aliquid?}",
+      "</oui-collapsible>"
+    ],
+    "description": "oui-collapsible-group"
   },
   "oui-criteria": {
     "scope": "html",
@@ -127,12 +456,26 @@
     "body": [
       "<oui-criteria",
       "\tdisabled=\"\\$ctrl.${1:disabled}\"",
-      "\tdata-model=\"\\$ctrl.${2:model}\"",
-      "\tdata-on-change=\"\\$ctrl.${3:onChange(modelValue)}\"",
-      "\tdata-properties=\"\\$ctrl.${4:properties}\">",
+      "\tmodel=\"\\$ctrl.${2:model}\"",
+      "\ton-change=\"\\$ctrl.${3:onChange(modelValue)}\"",
+      "\tproperties=\"\\$ctrl.${4:properties}\">",
       "</oui-criteria>"
     ],
     "description": "oui-criteria"
+  },
+  "oui-criteria-with-a-search-field": {
+    "scope": "html",
+    "prefix": "oui-criteria-with-a-search-field",
+    "body": [
+      "<oui-criteria",
+      "\tdisabled=\"\\$ctrl.${1:disabled}\"",
+      "\tmodel=\"\\$ctrl.${2:model}\"",
+      "\ton-change=\"\\$ctrl.${3:onChange(modelValue)}\"",
+      "\tproperties=\"\\$ctrl.${4:properties}\"",
+      "\tsearchable>",
+      "</oui-criteria>"
+    ],
+    "description": "oui-criteria-with-a-search-field"
   },
   "oui-dropdown": {
     "scope": "html",
@@ -141,32 +484,23 @@
       "<oui-dropdown>",
       "\t<oui-dropdown-trigger",
       "\t\tdisabled=\"\\$ctrl.${1:disabled}\"",
-      "\t\tdata-text=\"${2:Actions}\">",
+      "\t\ttext=\"${2:Actions}\">",
       "\t</oui-dropdown-trigger>",
       "\t<oui-dropdown-content>",
-      "\t\t<oui-dropdown-group data-label=\"${3:Lorem ipsum}\">",
-      "\t\t\t<oui-dropdown-item data-on-click=\"\\$ctrl.${4:onActionClick()}\">",
+      "\t\t<oui-dropdown-group label=\"${3:Lorem ipsum}\">",
+      "\t\t\t<oui-dropdown-item on-click=\"\\$ctrl.${4:onActionClick()}\">",
       "\t\t\t\t${5:Action 1 (button)}",
       "\t\t\t</oui-dropdown-item>",
       "\t\t\t<oui-dropdown-item href=\"${6:#}\">",
       "\t\t\t\t${7:Action 2 (link/href)}",
       "\t\t\t</oui-dropdown-item>",
       "\t\t</oui-dropdown-group>",
-      "\t\t<oui-dropdown-group data-label=\"${8:Dolor sit amet}\">",
-      "\t\t\t<oui-dropdown-item disabled>",
-      "\t\t\t\t${8:Action 3 (disabled)}",
-      "\t\t\t</oui-dropdown-item>",
-      "\t\t</oui-dropdown-group>",
       "\t\t<oui-dropdown-divider></oui-dropdown-divider>",
-      "\t\t<oui-dropdown-item",
-      "\t\t\thref=\"${9:#}\"",
-      "\t\t\tdata-external>",
-      "\t\t\t${10:External link}",
+      "\t\t<oui-dropdown-item href=\"${8:#}\" external>",
+      "\t\t\t${9:External link}",
       "\t\t</oui-dropdown-item>",
-      "\t\t<oui-dropdown-item",
-      "\t\t\thref=\"${11:#}\"",
-      "\t\t\tdata-sticky>",
-      "\t\t\t${12:Start guided tour}",
+      "\t\t<oui-dropdown-item href=\"${10:#}\" sticky>",
+      "\t\t\t${11:Start guided tour}",
       "\t\t</oui-dropdown-item>",
       "\t</oui-dropdown-content>",
       "</oui-dropdown>"
@@ -178,18 +512,18 @@
     "prefix": "oui-dual-list",
     "body": [
       "<oui-dual-list",
-      "\tdata-on-add=\"\\$ctrl.${1:onAdd(item)}\"",
-      "\tdata-on-change=\"\\$ctrl.${2:onChange(item)}\"",
-      "\tdata-on-remove=\"\\$ctrl.${3:onRemove(item)}\"",
-      "\tdata-source=\"\\$ctrl.${4:source}\"",
-      "\tdata-target=\"\\$ctrl.${5:target}\">",
+      "\ton-add=\"\\$ctrl.${1:onAdd(item)}\"",
+      "\ton-change=\"\\$ctrl.${2:onChange(item)}\"",
+      "\ton-remove=\"\\$ctrl.${3:onRemove(item)}\"",
+      "\tsource=\"\\$ctrl.${4:source}\"",
+      "\ttarget=\"\\$ctrl.${5:target}\">",
       "\t<oui-dual-list-source",
-      "\t\tdata-loading=\"\\$ctrl.${6:sourceLoading}\"",
-      "\t\tdata-searchable=\"\\$ctrl.${7:sourceSearchable}\">",
+      "\t\tloading=\"\\$ctrl.${6:sourceLoading}\"",
+      "\t\tsearchable=\"\\$ctrl.${7:sourceSearchable}\">",
       "\t</oui-dual-list-source>",
       "\t<oui-dual-list-target",
-      "\t\tdata-loading=\"\\$ctrl.${8:targetLoading}\"",
-      "\t\tdata-searchable=\"\\$ctrl.${9:targetSearchable}\">",
+      "\t\tloading=\"\\$ctrl.${8:targetLoading}\"",
+      "\t\tsearchable=\"\\$ctrl.${9:targetSearchable}\">",
       "\t</oui-dual-list-target>",
       "</oui-dual-list>"
     ],
@@ -199,22 +533,60 @@
     "scope": "html",
     "prefix": "oui-field",
     "body": [
-      "<oui-field",
-      "\tdata-label=\"${1:Lastname}\"",
-      "\tdata-help-text=\"${2:At least 3 chars}\"",
-      "\tdata-size=\"${3:xl}\">",
-      "\t<input",
-      "\t\tclass=\"oui-input\"",
+      "<oui-field label=\"${1:Label}\">",
+      "\t<input class=\"oui-input\"",
+      "\t\tname=\"${2:field}\"",
+      "\t\tplaceholder=\"${3:Please insert your text…}\"",
       "\t\ttype=\"text\"",
-      "\t\tid=\"${4:lastname}\"",
-      "\t\tname=\"${4:lastname}\"",
-      "\t\tdata-ng-model=\"\\$ctrl.${5:user.lastname}\"",
-      "\t\trequired",
-      "\t\tminlength=\"${6:3}\"",
-      "\t\tmaxlength=\"${7:32}\">",
+      "\t\tvalue=\"${4:Lorem ipsum dolor sit amet}\">",
       "</oui-field>"
     ],
     "description": "oui-field"
+  },
+  "oui-field-label-popover": {
+    "scope": "html",
+    "prefix": "oui-field-label-popover",
+    "body": [
+      "<oui-field label=\"${1:Label}\"",
+      "\tlabel-popover=\"${2:Lorem ipsum dolor sit amet}\">",
+      "\t<input class=\"oui-input\"",
+      "\t\tname=\"${3:field}\"",
+      "\t\tplaceholder=\"${4:Please insert your text…}\"",
+      "\t\ttype=\"text\"",
+      "\t\tvalue=\"${5:Lorem ipsum dolor sit amet}\">",
+      "</oui-field>"
+    ],
+    "description": "oui-field-label-popover"
+  },
+  "oui-field-help-text": {
+    "scope": "html",
+    "prefix": "oui-field-help-text",
+    "body": [
+      "<oui-field label=\"${1:Label}\"",
+      "\thelp-text=\"${2:Lorem ipsum dolor sit amet}\">",
+      "\t<input class=\"oui-input\"",
+      "\t\tname=\"${3:field}\"",
+      "\t\tplaceholder=\"${4:Please insert your text…}\"",
+      "\t\ttype=\"text\"",
+      "\t\tvalue=\"${5:Lorem ipsum dolor sit amet}\">",
+      "</oui-field>"
+    ],
+    "description": "oui-field-help-text"
+  },
+  "oui-field-size": {
+    "scope": "html",
+    "prefix": "oui-field-size",
+    "body": [
+      "<oui-field label=\"${1:Label}\"",
+      "\tsize=\"${2:xs}\">",
+      "\t<input class=\"oui-input\"",
+      "\t\tname=\"${3:field-xs}\"",
+      "\t\tplaceholder=\"${4:Please insert your text…}\"",
+      "\t\ttype=\"text\"",
+      "\t\tvalue=\"${5:Lorem ipsum dolor sit amet}\">",
+      "</oui-field>"
+    ],
+    "description": "oui-field-size"
   },
   "oui-file": {
     "scope": "html",
@@ -223,7 +595,7 @@
       "<oui-file",
       "\tdisabled=\"\\$ctrl.${1:disabled}\"",
       "\tplaceholder=\"${2:Select a file…}\"",
-      "\tdata-model=\"\\$ctrl.${3:model}\">",
+      "\tmodel=\"\\$ctrl.${3:model}\">",
       "</oui-file>"
     ],
     "description": "oui-file"
@@ -236,69 +608,121 @@
     ],
     "description": "oui-form-actions"
   },
+  "oui-form-actions-custom-naming": {
+    "scope": "html",
+    "prefix": "oui-form-actions-custom-naming",
+    "body": [
+      "<oui-form-actions",
+      "\tsubmit-text=\"${1:Apply}\"",
+      "\tcancel-text=\"${2:Close}\"",
+      "\ton-submit=\"\\$ctrl.${3:onSubmitClick()}\"",
+      "\ton-cancel=\"\\$ctrl.${4:onCancelClick()}\"",
+      "\tdisabled=\"\\$ctrl.${5:disabled}\">",
+      "</oui-form-actions>"
+    ],
+    "description": "oui-form-actions-custom-naming"
+  },
   "oui-guide-menu": {
     "scope": "html",
     "prefix": "oui-guide-menu",
     "body": [
-      "<oui-guide-menu data-text=\"${1:Guides}\">",
-      "\t<oui-guide-menu-item data-on-click=\"\\$ctrl.${2:onGuideClick()}\">",
+      "<oui-guide-menu text=\"${1:Guides}\">",
+      "\t<oui-guide-menu-item on-click=\"\\$ctrl.${2:onGuideClick()}\">",
       "\t\t${3:Guide 2 (button)}",
       "\t</oui-guide-menu-item>",
-      "\t<oui-guide-menu-item",
-      "\t\tdata-on-click=\"\\$ctrl.${4:onGuideClick()}\"",
-      "\t\thref=\"${5}\">",
+      "\t<oui-guide-menu-item on-click=\"\\$ctrl.${4:onGuideClick()}\" href=\"${5:#}\">",
       "\t\t${6:Guide 1 (link)}",
       "\t</oui-guide-menu-item>",
       "\t<oui-guide-menu-divider></oui-guide-menu-divider>",
-      "\t<oui-guide-menu-item",
-      "\t\tdata-on-click=\"\\$ctrl.${7:onGuideClick()}\"",
-      "\t\thref=\"${8}\"",
-      "\t\tdata-external>",
+      "\t<oui-guide-menu-item on-click=\"\\$ctrl.${7:onGuideClick()}\" href=\"${8:#}\" external>",
       "\t\t${9:External link}",
       "\t</oui-guide-menu-item>",
       "</oui-guide-menu>"
     ],
     "description": "oui-guide-menu"
   },
+  "oui-guide-menu-with-sections": {
+    "scope": "html",
+    "prefix": "oui-guide-menu-with-sections",
+    "body": [
+      "<oui-guide-menu text=\"${1:Guides}\">",
+      "\t<oui-guide-menu-group label=\"${2:Section 1}\">",
+      "\t\t<oui-guide-menu-item on-click=\"\\$ctrl.${3:onGuideClick()}\">",
+      "\t\t\t${4:Guide 2 (button)}",
+      "\t\t</oui-guide-menu-item>",
+      "\t\t<oui-guide-menu-item on-click=\"\\$ctrl.${5:onGuideClick()}\" href=\"${6:#}\">",
+      "\t\t\t${7:Guide 1 (link)}",
+      "\t\t</oui-guide-menu-item>",
+      "\t</oui-guide-menu-group>",
+      "\t<oui-guide-menu-group label=\"${8:Section 2}\">",
+      "\t\t<oui-guide-menu-item on-click=\"\\$ctrl.${9:onGuideClick()}\">",
+      "\t\t\t${10:Guide 2 (button)}",
+      "\t\t</oui-guide-menu-item>",
+      "\t\t<oui-guide-menu-item on-click=\"\\$ctrl.${11:onGuideClick()}\" href=\"${12:#}\">",
+      "\t\t\t${13:Guide 1 (link)}",
+      "\t\t</oui-guide-menu-item>",
+      "\t</oui-guide-menu-group>",
+      "\t<oui-guide-menu-divider></oui-guide-menu-divider>",
+      "\t<oui-guide-menu-item on-click=\"\\$ctrl.${14:onGuideClick()}\" href=\"${15:#}\" external>",
+      "\t\t${16:External link}",
+      "\t</oui-guide-menu-item>",
+      "</oui-guide-menu>"
+    ],
+    "description": "oui-guide-menu-with-sections"
+  },
   "oui-header": {
     "scope": "html",
     "prefix": "oui-header",
     "body": [
       "<oui-header",
-      "\tdata-heading=\"${1:My title}\"",
-      "\tdata-description=\"${2:My subtitle}\">",
+      "\theading=\"${1:My title}\"",
+      "\tdescription=\"${2:My subtitle}\">",
       "</oui-header>"
     ],
     "description": "oui-header"
+  },
+  "oui-header-with-tabs": {
+    "scope": "html",
+    "prefix": "oui-header-with-tabs",
+    "body": [
+      "<oui-header",
+      "\theading=\"${1:My title}\"",
+      "\tdescription=\"${2:My subtitle}\">",
+      "\t<oui-header-tabs>",
+      "\t\t<oui-header-tabs-item href=\"${3:#}\" active>${4:Home}</oui-header-tabs-item>",
+      "\t\t<oui-header-tabs-item href=\"${5:#}\">${6:Header}</oui-header-tabs-item>",
+      "\t\t<oui-header-tabs-item href=\"${7:#}\">${8:Header Tabs}</oui-header-tabs-item>",
+      "\t\t<oui-header-tabs-dropdown text=\"${9:Form}\">",
+      "\t\t\t<oui-header-tabs-item href=\"${10:#}\" disabled>${11:Field}</oui-header-tabs-item>",
+      "\t\t\t<oui-header-tabs-divider></oui-header-tabs-divider>",
+      "\t\t\t<oui-header-tabs-item href=\"${12:#}\">${13:Checkbox}</oui-header-tabs-item>",
+      "\t\t\t<oui-header-tabs-item href=\"${14:#}\">${15:Radio}</oui-header-tabs-item>",
+      "\t\t</oui-header-tabs-dropdown>",
+      "\t\t<oui-header-tabs-item href=\"${16:#}\" disabled>${17:Pagination}</oui-header-tabs-item>",
+      "\t\t<oui-header-tabs-item href=\"${18:#}\">${19:Datagrid}</oui-header-tabs-item>",
+      "\t</oui-header-tabs>",
+      "</oui-header>"
+    ],
+    "description": "oui-header-with-tabs"
   },
   "oui-inline-adder": {
     "scope": "html",
     "prefix": "oui-inline-adder",
     "body": [
       "<oui-inline-adder",
-      "\tdata-on-add=\"\\$ctrl.${1:onAdd(form)}\"",
-      "\tdata-on-change=\"\\$ctrl.${2:onChange(form)}\"",
-      "\tdata-on-remove=\"\\$ctrl.${3:onRemove(form)}\">",
+      "\ton-add=\"\\$ctrl.${1:onAdd(form)}\"",
+      "\ton-change=\"\\$ctrl.${2:onChange(form)}\"",
+      "\ton-remove=\"\\$ctrl.${3:onRemove(form)}\">",
       "\t<oui-inline-adder-row>",
       "\t\t<oui-inline-adder-field>",
-      "\t\t\t<oui-field data-label=\"${4:Field 1}\">",
-      "\t\t\t\t<input type=\"text\"",
-      "\t\t\t\t\tclass=\"oui-input\"",
-      "\t\t\t\t\tname=\"${5:field1}\"",
-      "\t\t\t\t\tdata-ng-model=\"${5:field1}\"",
-      "\t\t\t\t\trequired>",
+      "\t\t\t<oui-field label=\"Field 1\">",
+      "\t\t\t\t<input type=\"text\" class=\"oui-input\" name=\"field1\" data-ng-model=\"field1\" required>",
       "\t\t\t</oui-field>",
       "\t\t</oui-inline-adder-field>",
-      "\t\t<oui-inline-adder-field data-adaptive>",
-      "\t\t\t<oui-field",
-      "\t\t\t\tdata-label=\"${6:Field 2}\"",
-      "\t\t\t\tdata-size=\"${7:m}\">",
+      "\t\t<oui-inline-adder-field adaptive>",
+      "\t\t\t<oui-field label=\"Field 2\" size=\"m\">",
       "\t\t\t\t<label class=\"oui-select\">",
-      "\t\t\t\t\t<select",
-      "\t\t\t\t\t\tname=\"${8:field2}\"",
-      "\t\t\t\t\t\tdata-ng-model=\"${8:field2}\"",
-      "\t\t\t\t\t\tclass=\"oui-select__input\"",
-      "\t\t\t\t\t\trequired>",
+      "\t\t\t\t\t<select name=\"field2\" data-ng-model=\"field2\" class=\"oui-select__input\" required>",
       "\t\t\t\t\t\t<option value=\"\" disabled selected>Select the OS</option>",
       "\t\t\t\t\t\t<option value=\"freebsd\">FreeBSD</option>",
       "\t\t\t\t\t\t<option value=\"linux\">Linux</option>",
@@ -309,12 +733,9 @@
       "\t\t\t\t</label>",
       "\t\t\t</oui-field>",
       "\t\t</oui-inline-adder-field>",
-      "\t\t<oui-inline-adder-field data-adaptive>",
-      "\t\t\t<oui-field data-label=\"${9:Field 3}\">",
-      "\t\t\t\t<oui-numeric",
-      "\t\t\t\t\tname=\"${10:field3}\"",
-      "\t\t\t\t\tdata-model=\"${11:field3}\">",
-      "\t\t\t\t</oui-numeric>",
+      "\t\t<oui-inline-adder-field adaptive>",
+      "\t\t\t<oui-field label=\"Field 3\">",
+      "\t\t\t\t<oui-numeric name=\"field3\" model=\"field3\"></oui-numeric>",
       "\t\t\t</oui-field>",
       "\t\t</oui-inline-adder-field>",
       "\t</oui-inline-adder-row>",
@@ -322,37 +743,189 @@
     ],
     "description": "oui-inline-adder"
   },
-  "oui-message": {
+  "oui-inline-adder-multiple-rows": {
     "scope": "html",
-    "prefix": "oui-message",
+    "prefix": "oui-inline-adder-multiple-rows",
     "body": [
-      "<oui-message data-type=\"${1:info}\">${2:Message}</oui-message>"
+      "<oui-inline-adder",
+      "\ton-add=\"\\$ctrl.${1:onAdd(form)}\"",
+      "\ton-change=\"\\$ctrl.${2:onChange(form)}\"",
+      "\ton-remove=\"\\$ctrl.${3:onRemove(form)}\">",
+      "\t<oui-inline-adder-row>",
+      "\t\t<oui-inline-adder-field>",
+      "\t\t\t<oui-field label=\"Field 1\">",
+      "\t\t\t\t<input type=\"text\" class=\"oui-input\" name=\"field1\" data-ng-model=\"field1\" required>",
+      "\t\t\t</oui-field>",
+      "\t\t</oui-inline-adder-field>",
+      "\t\t<oui-inline-adder-field>",
+      "\t\t\t<oui-field label=\"Field 2\">",
+      "\t\t\t\t<input type=\"text\" class=\"oui-input\" name=\"field2\" data-ng-model=\"field2\">",
+      "\t\t\t</oui-field>",
+      "\t\t</oui-inline-adder-field>",
+      "\t</oui-inline-adder-row>",
+      "\t<oui-inline-adder-row>",
+      "\t\t<oui-inline-adder-field>",
+      "\t\t\t<oui-field label=\"Field 3\">",
+      "\t\t\t\t<input type=\"text\" class=\"oui-input\" name=\"field3\" data-ng-model=\"field3\" required>",
+      "\t\t\t</oui-field>",
+      "\t\t</oui-inline-adder-field>",
+      "\t\t<oui-inline-adder-field>",
+      "\t\t\t<oui-field label=\"Field 4\">",
+      "\t\t\t\t<input type=\"text\" class=\"oui-input\" name=\"field4\" data-ng-model=\"field4\">",
+      "\t\t\t</oui-field>",
+      "\t\t</oui-inline-adder-field>",
+      "\t</oui-inline-adder-row>",
+      "</oui-inline-adder>"
     ],
-    "description": "oui-message"
+    "description": "oui-inline-adder-multiple-rows"
+  },
+  "oui-message-info": {
+    "scope": "html",
+    "prefix": "oui-message-info",
+    "body": [
+      "<oui-message type=\"info\">${1:Lorem ipsum dolor sit amet, consectetur adipiscing elit.}</oui-message>"
+    ],
+    "description": "oui-message-info"
+  },
+  "oui-message-success": {
+    "scope": "html",
+    "prefix": "oui-message-success",
+    "body": [
+      "<oui-message type=\"success\">${1:Lorem ipsum dolor sit amet, consectetur adipiscing elit.}</oui-message>"
+    ],
+    "description": "oui-message-success"
+  },
+  "oui-message-warning": {
+    "scope": "html",
+    "prefix": "oui-message-warning",
+    "body": [
+      "<oui-message type=\"warning\">${1:Lorem ipsum dolor sit amet, consectetur adipiscing elit.}</oui-message>"
+    ],
+    "description": "oui-message-warning"
+  },
+  "oui-message-error": {
+    "scope": "html",
+    "prefix": "oui-message-error",
+    "body": [
+      "<oui-message type=\"error\">${1:Lorem ipsum dolor sit amet, consectetur adipiscing elit.}</oui-message>"
+    ],
+    "description": "oui-message-error"
+  },
+  "oui-message-info-dismissable": {
+    "scope": "html",
+    "prefix": "oui-message-info-dismissable",
+    "body": [
+      "<oui-message",
+      "\ttype=\"info\"",
+      "\taria-close-button-label=\"${1:Close}\"",
+      "\ton-dismiss=\"\\$ctrl.${2:onDismiss()}\"",
+      "\tdismissable>",
+      "\t${3:Lorem ipsum dolor sit amet, consectetur adipiscing elit.}",
+      "</oui-message>"
+    ],
+    "description": "oui-message-info-dismissable"
+  },
+  "oui-message-success-dismissable": {
+    "scope": "html",
+    "prefix": "oui-message-success-dismissable",
+    "body": [
+      "<oui-message",
+      "\ttype=\"success\"",
+      "\taria-close-button-label=\"${1:Close}\"",
+      "\ton-dismiss=\"\\$ctrl.${2:onDismiss()}\"",
+      "\tdismissable>",
+      "\t${3:Lorem ipsum dolor sit amet, consectetur adipiscing elit.}",
+      "</oui-message>"
+    ],
+    "description": "oui-message-success-dismissable"
+  },
+  "oui-message-warning-dismissable": {
+    "scope": "html",
+    "prefix": "oui-message-warning-dismissable",
+    "body": [
+      "<oui-message",
+      "\ttype=\"warning\"",
+      "\taria-close-button-label=\"${1:Close}\"",
+      "\ton-dismiss=\"\\$ctrl.${2:onDismiss()}\"",
+      "\tdismissable>",
+      "\t${3:Lorem ipsum dolor sit amet, consectetur adipiscing elit.}",
+      "</oui-message>"
+    ],
+    "description": "oui-message-warning-dismissable"
+  },
+  "oui-message-error-dismissable": {
+    "scope": "html",
+    "prefix": "oui-message-error-dismissable",
+    "body": [
+      "<oui-message",
+      "\ttype=\"error\"",
+      "\taria-close-button-label=\"${1:Close}\"",
+      "\ton-dismiss=\"\\$ctrl.${2:onDismiss()}\"",
+      "\tdismissable>",
+      "\t${3:Lorem ipsum dolor sit amet, consectetur adipiscing elit.}",
+      "</oui-message>"
+    ],
+    "description": "oui-message-error-dismissable"
   },
   "oui-modal": {
     "scope": "html",
     "prefix": "oui-modal",
     "body": [
       "<oui-modal",
-      "\tdata-heading=\"${1:Modal title}\"",
-      "\tdata-loading=\"\\$ctrl.${2:isLoading}\"",
-      "\tdata-on-dismiss=\"\\$ctrl.${3:onDismiss()}\">",
-      "\t${4:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper ligula nec fringilla tempor. In rhoncus ullamcorper feugiat. Phasellus vel ipsum vitae neque varius luctus. Proin id iaculis arcu. Fusce justo arcu, egestas vel nulla nec, dictum cursus lacus. Aenean elementum vel odio quis rutrum. In quis tellus in neque vulputate rhoncus vitae ut justo. Ut dignissim varius est in consequat. Donec nisi mauris, pellentesque condimentum congue in, blandit ut arcu. In et elit ipsum.}",
+      "\theading=\"${1:Modal title}\"",
+      "\tloading=\"\\$ctrl.${2:isLoading}\"",
+      "\ton-dismiss=\"\\$ctrl.${3:onDismiss()}\">",
+      "\tLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "\tDuis semper ligula nec fringilla tempor. In rhoncus ullamcorper feugiat.",
+      "\tPhasellus vel ipsum vitae neque varius luctus. Proin id iaculis arcu.",
+      "\tFusce justo arcu, egestas vel nulla nec, dictum cursus lacus.",
+      "\tAenean elementum vel odio quis rutrum. In quis tellus in neque vulputate",
+      "\trhoncus vitae ut justo. Ut dignissim varius est in consequat.",
+      "\tDonec nisi mauris, pellentesque condimentum congue in, blandit ut arcu.",
+      "\tIn et elit ipsum.",
       "</oui-modal>"
     ],
     "description": "oui-modal"
+  },
+  "oui-modal-with-actions": {
+    "scope": "html",
+    "prefix": "oui-modal-with-actions",
+    "body": [
+      "<oui-modal",
+      "\theading=\"${1:Modal title}\"",
+      "\tloading=\"\\$ctrl.${2:isLoading}\"",
+      "\tprimary-action=\"\\$ctrl.${3:onPrimaryAction()}\"",
+      "\tprimary-disabled=\"\\$ctrl.${4:primaryDisabled}\"",
+      "\tprimary-label=\"${5:Ok}\"",
+      "\tsecondary-action=\"\\$ctrl.${6:onSecondaryAction()}\"",
+      "\tsecondary-disabled=\"\\$ctrl.${7:secondaryDisabled}\"",
+      "\tsecondary-label=\"${8:Cancel}\"",
+      "\ton-dismiss=\"\\$ctrl.${9:onDismiss()}\">",
+      "\t<p>",
+      "\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "\t\tDuis semper ligula nec fringilla tempor. In rhoncus ullamcorper feugiat.",
+      "\t\tPhasellus vel ipsum vitae neque varius luctus. Proin id iaculis arcu.",
+      "\t\tFusce justo arcu, egestas vel nulla nec, dictum cursus lacus.",
+      "\t\tAenean elementum vel odio quis rutrum. In quis tellus in neque vulputate",
+      "\t\trhoncus vitae ut justo. Ut dignissim varius est in consequat.",
+      "\t\tDonec nisi mauris, pellentesque condimentum congue in, blandit ut arcu.",
+      "\t\tIn et elit ipsum.",
+      "\t</p>",
+      "</oui-modal>"
+    ],
+    "description": "oui-modal-with-actions"
   },
   "oui-navbar": {
     "scope": "html",
     "prefix": "oui-navbar",
     "body": [
       "<oui-navbar",
-      "\tdata-brand=\"$ctrl.${1:brand}\"",
-      "\tdata-active-link=\"${2:lorem}\"",
-      "\tdata-main-links=\"\\$ctrl.${3:mainLinks}\"",
-      "\tdata-aside-links=\"\\$ctrl.${4:asideLinks}\"",
-      "\tdata-toggler-links=\"\\$ctrl.${5:togglerLinks}\">",
+      "\tbrand=\"\\$ctrl.${1:brand}\"",
+      "\tactive-link=\"${2:lorem}\"",
+      "\tmain-links=\"\\$ctrl.${3:mainLinks}\"",
+      "\taside-links=\"\\$ctrl.${4:asideLinks}\"",
+      "\ttoggler-links=\"\\$ctrl.${5:togglerLinks}\"",
+      "\tfixed>",
       "</oui-navbar>"
     ],
     "description": "oui-navbar"
@@ -362,21 +935,34 @@
     "prefix": "oui-numeric",
     "body": [
       "<oui-numeric",
-      "\tdata-model=\"\\$ctrl.${1:model}\"",
+      "\tmodel=\"\\$ctrl.${1:model}\"",
       "\tdisabled=\"\\$ctrl.${2:disabled}\"",
-      "\tdata-on-change=\"\\$ctrl.${3:onChange(modelValue)}\">",
+      "\ton-change=\"\\$ctrl.${3:onChange(modelValue)}\">",
       "</oui-numeric>"
     ],
     "description": "oui-numeric"
+  },
+  "oui-numeric-limits": {
+    "scope": "html",
+    "prefix": "oui-numeric-limits",
+    "body": [
+      "<oui-numeric",
+      "\tmin=\"\\$ctrl.${1:min}\"",
+      "\tmax=\"\\$ctrl.${2:max}\"",
+      "\tmodel=\"\\$ctrl.${3:model}\"",
+      "\tdisabled=\"\\$ctrl.${4:disabled}\"",
+      "\ton-change=\"\\$ctrl.${5:onChange(modelValue)}\">",
+      "</oui-numeric>"
+    ],
+    "description": "oui-numeric-limits"
   },
   "oui-pagination": {
     "scope": "html",
     "prefix": "oui-pagination",
     "body": [
       "<oui-pagination",
-      "\tdata-current-offset=\"${1:1}\"",
-      "\tdata-page-size=\"${2:100}\"",
-      "\tdata-total-items=\"${3:12}\">",
+      "\tcurrent-offset=\"${1:1}\"",
+      "\ttotal-items=\"${2:100}\">",
       "</oui-pagination>"
     ],
     "description": "oui-pagination"
@@ -387,24 +973,64 @@
     "body": [
       "<oui-password",
       "\tdisabled=\"\\$ctrl.${1:disabled}\"",
-      "\tdata-model=\"\\$ctrl.${2:model}\"",
+      "\tmodel=\"\\$ctrl.${2:model}\"",
       "\tplaceholder=\"${3:Password}\">",
       "</oui-password>"
     ],
     "description": "oui-password"
   },
-  "oui-progress": {
+  "oui-progress-info": {
     "scope": "html",
-    "prefix": "oui-progress",
+    "prefix": "oui-progress-info",
     "body": [
       "<oui-progress>",
-      "\t<oui-progress-bar",
-      "\t\tdata-type=\"${1:info}\"",
+      "\t<oui-progress-bar type=\"info\" value=\"\\$ctrl.${1:percentage}\"></oui-progress-bar>",
+      "</oui-progress>"
+    ],
+    "description": "oui-progress-info"
+  },
+  "oui-progress-success": {
+    "scope": "html",
+    "prefix": "oui-progress-success",
+    "body": [
+      "<oui-progress>",
+      "\t<oui-progress-bar type=\"success\" value=\"\\$ctrl.${1:percentage}\"></oui-progress-bar>",
+      "</oui-progress>"
+    ],
+    "description": "oui-progress-success"
+  },
+  "oui-progress-warning": {
+    "scope": "html",
+    "prefix": "oui-progress-warning",
+    "body": [
+      "<oui-progress>",
+      "\t<oui-progress-bar type=\"warning\" value=\"\\$ctrl.${1:percentage}\"></oui-progress-bar>",
+      "</oui-progress>"
+    ],
+    "description": "oui-progress-warning"
+  },
+  "oui-progress-error": {
+    "scope": "html",
+    "prefix": "oui-progress-error",
+    "body": [
+      "<oui-progress>",
+      "\t<oui-progress-bar type=\"error\" value=\"\\$ctrl.${1:percentage}\"></oui-progress-bar>",
+      "</oui-progress>"
+    ],
+    "description": "oui-progress-error"
+  },
+  "oui-progress-with-custom-label": {
+    "scope": "html",
+    "prefix": "oui-progress-with-custom-label",
+    "body": [
+      "<oui-progress>",
+      "\t<oui-progress-bar type=\"${1:info}\"",
       "\t\tvalue=\"\\$ctrl.${2:percentage}\">",
+      "\t\tProgress: {{\\$ctrl.${2:percentage}}}%",
       "\t</oui-progress-bar>",
       "</oui-progress>"
     ],
-    "description": "oui-progress"
+    "description": "oui-progress-with-custom-label"
   },
   "oui-radio": {
     "scope": "html",
@@ -412,14 +1038,46 @@
     "body": [
       "<oui-radio",
       "\tdisabled=\"\\$ctrl.${1:disabled}\"",
-      "\tdata-model=\"\\$ctrl.${2:model}\"",
+      "\tmodel=\"\\$ctrl.${2:model}\"",
       "\tname=\"${3:oui-radio-1}\"",
-      "\tdata-on-change=\"\\$ctrl.${4:onChange(modelValue)}\"",
+      "\ton-change=\"\\$ctrl.${4:onChange(modelValue)}\"",
       "\tvalue=\"\\$ctrl.${5:value1}\">",
       "\t${6:Value A}",
       "</oui-radio>"
     ],
     "description": "oui-radio"
+  },
+  "oui-radio-inline": {
+    "scope": "html",
+    "prefix": "oui-radio-inline",
+    "body": [
+      "<oui-radio",
+      "\tdisabled=\"\\$ctrl.${1:disabled}\"",
+      "\tmodel=\"\\$ctrl.${2:model}\"",
+      "\tname=\"${3:oui-radio-1}\"",
+      "\ton-change=\"\\$ctrl.${4:onChange(modelValue)}\"",
+      "\tvalue=\"\\$ctrl.${5:value1}\"",
+      "\tinline>",
+      "\t${6:Value A}",
+      "</oui-radio>"
+    ],
+    "description": "oui-radio-inline"
+  },
+  "oui-radio-with-description": {
+    "scope": "html",
+    "prefix": "oui-radio-with-description",
+    "body": [
+      "<oui-radio",
+      "\tdisabled=\"\\$ctrl.${1:disabled}\"",
+      "\tmodel=\"\\$ctrl.${2:model}\"",
+      "\tname=\"${3:oui-radio-1}\"",
+      "\ton-change=\"\\$ctrl.${4:onChange(modelValue)}\"",
+      "\tvalue=\"\\$ctrl.${5:value1}\">",
+      "\t<oui-radio-label>${6:Value A}</oui-radio-label>",
+      "\t<oui-radio-description>${7:Lorem ipsum dolor sit amet, consectetur adipiscing elit.}</oui-radio-description>",
+      "</oui-radio>"
+    ],
+    "description": "oui-radio-with-description"
   },
   "oui-search": {
     "scope": "html",
@@ -427,14 +1085,30 @@
     "body": [
       "<oui-search",
       "\tdisabled=\"\\$ctrl.${1:disabled}\"",
-      "\tdata-model=\"\\$ctrl.${2:model}\"",
-      "\tdata-on-change=\"\\$ctrl.${3:onChange(modelValue)}\"",
-      "\tdata-on-reset=\"\\$ctrl.${4:onReset()}\"",
-      "\tdata-on-submit=\"\\$ctrl.${5:onSubmit(modelValue)}\"",
+      "\tmodel=\"\\$ctrl.${2:model}\"",
+      "\ton-change=\"\\$ctrl.${3:onChange(modelValue)}\"",
+      "\ton-reset=\"\\$ctrl.${4:onReset()}\"",
+      "\ton-submit=\"\\$ctrl.${5:onSubmit(modelValue)}\"",
       "\tplaceholder=\"${6:Placeholder example}\">",
       "</oui-search>"
     ],
     "description": "oui-search"
+  },
+  "oui-search-simple-autocomplete": {
+    "scope": "html",
+    "prefix": "oui-search-simple-autocomplete",
+    "body": [
+      "<oui-search",
+      "\tautocomplete=\"\\$ctrl.${1:autocomplete}\"",
+      "\tautocomplete-property=\"${2:country.name}\"",
+      "\tmodel=\"\\$ctrl.${3:model}\"",
+      "\ton-change=\"\\$ctrl.${4:onChange(modelValue)}\"",
+      "\ton-reset=\"\\$ctrl.${5:onReset()}\"",
+      "\ton-submit=\"\\$ctrl.${6:onSubmit(modelValue)}\"",
+      "\tplaceholder=\"${7:Search country name}\">",
+      "</oui-search>"
+    ],
+    "description": "oui-search-simple-autocomplete"
   },
   "oui-select": {
     "scope": "html",
@@ -442,16 +1116,29 @@
     "body": [
       "<oui-select",
       "\tdisabled=\"\\$ctrl.${1:disabled}\"",
-      "\tdata-items=\"${2:['a', 'b', 'c']}\"",
-      "\tdata-model=\"\\$ctrl.${3:model}\"",
-      "\tname=\"${4:letter}\"",
-      "\tplaceholder=\"{{ \\$ctrl.${5:placeholder} }}\"",
-      "\tdata-on-blur=\"\\$ctrl.${6:onBlur()}\"",
-      "\tdata-on-change=\"\\$ctrl.${7:onChange(modelValue)}\"",
-      "\tdata-on-focus=\"\\$ctrl.${8:onFocus()}\">",
+      "\titems=\"${2:['a', 'b', 'c']}\"",
+      "\tmodel=\"\\$ctrl.${3:model}\"",
+      "\tplaceholder=\"${4:Select a letter…}\"",
+      "\ton-blur=\"\\$ctrl.${5:onBlur()}\"",
+      "\ton-change=\"\\$ctrl.${6:onChange(modelValue)}\"",
+      "\ton-focus=\"\\$ctrl.${7:onFocus()}\">",
       "</oui-select>"
     ],
     "description": "oui-select"
+  },
+  "oui-select-inline": {
+    "scope": "html",
+    "prefix": "oui-select-inline",
+    "body": [
+      "<oui-select",
+      "\tdisabled=\"\\$ctrl.${1:disabled}\"",
+      "\titems=\"${2:['a', 'b', 'c']}\"",
+      "\tmodel=\"\\$ctrl.${3:model}\"",
+      "\tplaceholder=\"${4:Select a letter…}\"",
+      "\tinline>",
+      "</oui-select>"
+    ],
+    "description": "oui-select-inline"
   },
   "oui-select-picker": {
     "scope": "html",
@@ -459,31 +1146,29 @@
     "body": [
       "<oui-select-picker",
       "\tdisabled=\"\\$ctrl.${1:disabled}\"",
-      "\tname=\"${1:ouiSelectPicker1}\"",
-      "\tdata-match=\"${2:name}\"",
-      "\tdata-model=\"\\$ctrl.${3:model}\"",
-      "\tdata-label=\"${4:Value A or B}\"",
-      "\tdata-on-change=\"\\$ctrl.${7:onChange(modelValue)}\"",
-      "\tdata-values=\"\\$ctrl.${8:values1}\">",
+      "\tname=\"${2:ouiSelectPicker1}\"",
+      "\tmodel=\"\\$ctrl.${3:model}\"",
+      "\tlabel=\"${4:Value A}\"",
+      "\ton-change=\"\\$ctrl.${5:onChange(modelValue)}\"",
+      "\tvalues=\"\\$ctrl.${6:values1}\">",
       "</oui-select-picker>",
+      "",
       "<oui-select-picker",
-      "\tdisabled=\"\\$ctrl.disabled\"",
-      "\tname=\"${1:ouiSelectPicker1}\"",
-      "\tdata-match=\"${2:name}\"",
-      "\tdata-model=\"$ctrl.${3:model}\"",
-      "\tdata-label=\"${5:Value C}\"",
-      "\tdata-on-change=\"\\$ctrl.${7:onChange(modelValue)}\"",
-      "\tdata-values=\"\\$ctrl.${9:values2}\">",
+      "\tdisabled=\"\\$ctrl.${1:disabled}\"",
+      "\tname=\"${2:ouiSelectPicker1}\"",
+      "\tmodel=\"\\$ctrl.${3:model}\"",
+      "\tlabel=\"${7:Value B}\"",
+      "\ton-change=\"\\$ctrl.${5:onChange(modelValue)}\"",
+      "\tvalues=\"\\$ctrl.${8:values2}\">",
       "</oui-select-picker>",
+      "",
       "<oui-select-picker",
-      "\tdisabled=\"\\$ctrl.disabled\"",
-      "\tname=\"${1:ouiSelectPicker1}\"",
-      "\tdata-match=\"${2:name}\"",
-      "\tdata-model=\"\\$ctrl.${3:model}\"",
-      "\tdata-placeholder=\"Select\"",
-      "\tdata-label=\"${6:Value D, E or F\"",
-      "\tdata-on-change=\"\\$ctrl.${7:onChange(modelValue)}\"",
-      "\tdata-values=\"\\$ctrl.${10:values3}\">",
+      "\tdisabled=\"\\$ctrl.${1:disabled}\"",
+      "\tname=\"${2:ouiSelectPicker1}\"",
+      "\tmodel=\"\\$ctrl.${3:model}\"",
+      "\tlabel=\"${9:Value C}\"",
+      "\ton-change=\"\\$ctrl.${5:onChange(modelValue)}\"",
+      "\tvalues=\"\\$ctrl.${10:values3}\">",
       "</oui-select-picker>"
     ],
     "description": "oui-select-picker"
@@ -496,39 +1181,55 @@
     ],
     "description": "oui-skeleton"
   },
+  "oui-skeleton-sizes": {
+    "scope": "html",
+    "prefix": "oui-skeleton-sizes",
+    "body": [
+      "<oui-skeleton size=\"${1:xs}\"></oui-skeleton>"
+    ],
+    "description": "oui-skeleton-sizes"
+  },
+  "oui-skeleton-randomized-width": {
+    "scope": "html",
+    "prefix": "oui-skeleton-randomized-width",
+    "body": [
+      "<oui-skeleton randomized></oui-skeleton>"
+    ],
+    "description": "oui-skeleton-randomized-width"
+  },
   "oui-slideshow": {
     "scope": "html",
     "prefix": "oui-slideshow",
     "body": [
       "<oui-slideshow",
-      "\tdata-loading=\"\\$ctrl.${1:loading}\"",
-      "\tdata-loop=\"\\$ctrl.${2:loop}\"",
-      "\tdata-on-dismiss=\"\\$ctrl.${3:onDismiss()}\"",
-      "\tdata-on-panel-change=\"\\$ctrl.${4:onPanelChange(direction, index)}\">",
+      "\tloading=\"\\$ctrl.${1:loading}\"",
+      "\tloop=\"\\$ctrl.${2:loop}\"",
+      "\ton-dismiss=\"\\$ctrl.${3:onDismiss()}\"",
+      "\ton-panel-change=\"\\$ctrl.${4:onPanelChange(direction, index)}\">",
       "\t<oui-slideshow-panel",
-      "\t\tdata-heading=\"${5:New feature}\"",
-      "\t\tdata-picture=\"${6:https://upload.wikimedia.org/wikipedia/commons/4/4a/Cercle_rouge_100%25.svg}\">",
+      "\t\theading=\"${5:New feature}\"",
+      "\t\tpicture=\"${6:https://upload.wikimedia.org/wikipedia/commons/4/4a/Cercle_rouge_100%25.svg}\">",
       "\t\t${7:Display your infrastructure as a list}",
       "\t</oui-slideshow-panel>",
       "\t<oui-slideshow-panel",
-      "\t\tdata-heading=\"${8:Introducing Ad-Sync}\"",
-      "\t\tdata-picture=\"${9:https://upload.wikimedia.org/wikipedia/commons/4/4a/Cercle_rouge_100%25.svg}\"",
-      "\t\tdata-on-click=\"\\$ctrl.${10:onPanelClick('Panel 2')}\"",
-      "\t\tdata-label=\"${11:Discover}\">",
-      "\t\t${12:Designed to help you synchronize your local Active Directory with your OVHcloud Active Directory.}",
+      "\t\theading=\"Introducing Ad-Sync\"",
+      "\t\tpicture=\"https://upload.wikimedia.org/wikipedia/commons/4/4a/Cercle_rouge_100%25.svg\"",
+      "\t\ton-click=\"\\$ctrl.onPanelClick('Panel 2')\"",
+      "\t\tlabel=\"Discover\">",
+      "\t\tDesigned to help you synchronize your local Active Directory with your OVH Active Directory.",
       "\t</oui-slideshow-panel>",
       "\t<oui-slideshow-panel",
-      "\t\tdata-heading=\"${13:New features available in your emails pages}\"",
-      "\t\tdata-on-click=\"\\$ctrl.${14:onPanelClick('Panel 3')}\"",
-      "\t\tdata-label=\"${15:Discover}\">",
-      "\t\t${16:Introducing Ad-Sync, designed to help you synchronize your local Active Directory with your OVHcloud Active Directory.}",
+      "\t\theading=\"New features available in your emails pages\"",
+      "\t\ton-click=\"\\$ctrl.onPanelClick('Panel 3')\"",
+      "\t\tlabel=\"Discover\">",
+      "\t\tIntroducing Ad-Sync, designed to help you synchronize your local Active Directory with your OVH Active Directory.",
       "\t</oui-slideshow-panel>",
       "\t<oui-slideshow-panel",
-      "\t\tdata-heading=\"${17:Introducing Ad-Sync}\"",
-      "\t\tdata-picture=\"${18:https://upload.wikimedia.org/wikipedia/commons/4/4a/Cercle_rouge_100%25.svg}\"",
-      "\t\tdata-on-click=\"\\$ctrl.${19:onPanelClick('Panel 4')}\"",
-      "\t\tdata-label=\"${20:Discover}\">",
-      "\t\t${21:Designed to help you synchronize your local Active Directory with your OVHcloud Active Directory.}",
+      "\t\theading=\"Introducing Ad-Sync\"",
+      "\t\tpicture=\"https://upload.wikimedia.org/wikipedia/commons/4/4a/Cercle_rouge_100%25.svg\"",
+      "\t\ton-click=\"\\$ctrl.onPanelClick('Panel 4')\"",
+      "\t\tlabel=\"Discover\">",
+      "\t\tDesigned to help you synchronize your local Active Directory with your OVH Active Directory.",
       "\t</oui-slideshow-panel>",
       "</oui-slideshow>"
     ],
@@ -542,64 +1243,56 @@
     ],
     "description": "oui-spinner"
   },
+  "oui-spinner-sizes": {
+    "scope": "html",
+    "prefix": "oui-spinner-sizes",
+    "body": [
+      "<oui-spinner size=\"${1:s}\"></oui-spinner>"
+    ],
+    "description": "oui-spinner-sizes"
+  },
   "oui-stepper": {
     "scope": "html",
     "prefix": "oui-stepper",
     "body": [
       "<oui-stepper",
-      "\tdata-on-init=\"\\$ctrl.${1:onInit()}\"",
-      "\tdata-on-finish=\"\\$ctrl.${2:onFinish(forms)}\">",
+      "\ton-init=\"\\$ctrl.${1:onInit()}\"",
+      "\ton-finish=\"\\$ctrl.${2:onFinish(forms)}\">",
       "\t<oui-step-form",
-      "\t\tdata-header=\"${3:Step 1}\"",
-      "\t\tdata-description=\"${4:This is a description}\"",
-      "\t\tdata-on-cancel=\"\\$ctrl.${5:onCancel()}\"",
-      "\t\tdata-on-focus=\"\\$ctrl.${6:onFocus()}\"",
-      "\t\tdata-on-submit=\"\\$ctrl.${7:onSubmit(form)}\">",
-      "\t\t<oui-field",
-      "\t\t\tdata-label=\"${8:Email}\"",
-      "\t\t\tdata-size=\"${9:xl}\">",
-      "\t\t\t<input",
-      "\t\t\t\tclass=\"oui-input\"",
-      "\t\t\t\ttype=\"${10:email}\"",
-      "\t\t\t\tname=\"${10:email}\"",
-      "\t\t\t\tdata-ng-model=\"\\$ctrl.${11:user.email}\"",
-      "\t\t\t\trequired>",
+      "\t\tname=\"${3:step1}\"",
+      "\t\theader=\"${4:Step 1}\"",
+      "\t\tdescription=\"${5:This is a description}\"",
+      "\t\ton-cancel=\"\\$ctrl.${6:onCancel()}\"",
+      "\t\ton-focus=\"\\$ctrl.${7:onFocus('step1')}\"",
+      "\t\ton-submit=\"\\$ctrl.${8:onSubmit(form)}\">",
+      "\t\t${9:<oui-field label=\"Email\" size=\"xl\">",
+      "\t\t\t<input class=\"oui-input\" type=\"email\" name=\"email\" data-ng-model=\"\\$ctrl.user.email\" required>",
+      "\t\t</oui-field>}",
+      "\t</oui-step-form>",
+      "",
+      "\t<oui-step-form",
+      "\t\tname=\"step2\"",
+      "\t\theader=\"Step 2\"",
+      "\t\tdescription=\"This is a description\"",
+      "\t\ton-cancel=\"\\$ctrl.onCancel()\"",
+      "\t\ton-focus=\"\\$ctrl.onFocus('step2')\"",
+      "\t\ton-submit=\"\\$ctrl.onSubmit(form)\"",
+      "\t\tskippable>",
+      "\t\t<oui-field label=\"Firstname\" size=\"xl\">",
+      "\t\t\t<input class=\"oui-input\" type=\"text\" name=\"firstname\" data-ng-model=\"\\$ctrl.user.firstname\" maxlength=\"32\">",
       "\t\t</oui-field>",
       "\t</oui-step-form>",
+      "",
       "\t<oui-step-form",
-      "\t\tdata-header=\"${12:Step 2}\"",
-      "\t\tdata-description=\"${13:This is a description}\"",
-      "\t\tdata-on-cancel=\"\\$ctrl.${14:onCancel()}\"",
-      "\t\tdata-on-focus=\"\\$ctrl.${15:onFocus()}\"",
-      "\t\tdata-on-submit=\"\\$ctrl.${16:onSubmit(form)}\"",
-      "\t\tdata-skippable>",
-      "\t\t<oui-field",
-      "\t\t\tdata-label=\"${17:Firstname}\"",
-      "\t\t\tdata-size=\"${18:xl}\">",
-      "\t\t\t<input",
-      "\t\t\t\tclass=\"oui-input\"",
-      "\t\t\t\ttype=\"text\"",
-      "\t\t\t\tname=\"${19:firstname}\"",
-      "\t\t\t\tdata-ng-model=\"\\$ctrl.${20:user.firstname}\"",
-      "\t\t\t\tmaxlength=\"${21:32}\">",
-      "\t\t</oui-field>",
-      "\t</oui-step-form>",
-      "\t<oui-step-form",
-      "\t\tdata-header=\"${22:Step 3}\"",
-      "\t\tdata-description=\"${23:This is a description}\"",
-      "\t\tdata-on-cancel=\"\\$ctrl.${24:onCancel()}\"",
-      "\t\tdata-on-focus=\"\\$ctrl.${25:onFocus()}\"",
-      "\t\tdata-on-submit=\"\\$ctrl.${26:onSubmit(form)}\"",
-      "\t\tdata-skippable>",
-      "\t\t<oui-field",
-      "\t\t\tdata-label=\"${27:Lastname}\"",
-      "\t\t\tdata-size=\"${28:xl}\">",
-      "\t\t\t<input",
-      "\t\t\t\tclass=\"oui-input\"",
-      "\t\t\t\ttype=\"text\"",
-      "\t\t\t\tname=\"${29:lastname}\"",
-      "\t\t\t\tdata-ng-model=\"\\$ctrl.${30:user.lastname}\"",
-      "\t\t\t\tmaxlength=\"${31:32}\">",
+      "\t\tname=\"step3\"",
+      "\t\theader=\"Step 3\"",
+      "\t\tdescription=\"This is a description\"",
+      "\t\ton-cancel=\"\\$ctrl.onCancel()\"",
+      "\t\ton-focus=\"\\$ctrl.onFocus('step3')\"",
+      "\t\ton-submit=\"\\$ctrl.onSubmit(form)\"",
+      "\t\tskippable>",
+      "\t\t<oui-field label=\"Lastname\" size=\"xl\">",
+      "\t\t\t<input class=\"oui-input\" type=\"text\" name=\"lastname\" data-ng-model=\"\\$ctrl.user.lastname\" maxlength=\"32\">",
       "\t\t</oui-field>",
       "\t</oui-step-form>",
       "</oui-stepper>"
@@ -612,8 +1305,8 @@
     "body": [
       "<oui-switch",
       "\tdisabled=\"\\$ctrl.${1:disabled}\"",
-      "\tdata-model=\"\\$ctrl.${2:checked}\"",
-      "\tdata-on-change=\"\\$ctrl.${3:onChange(modelValue)}\">",
+      "\tmodel=\"\\$ctrl.${2:checked}\"",
+      "\ton-change=\"\\$ctrl.${3:onChange(modelValue)}\">",
       "</oui-switch>"
     ],
     "description": "oui-switch"
@@ -623,18 +1316,36 @@
     "prefix": "oui-tabs",
     "body": [
       "<oui-tabs>",
-      "\t<oui-tabs-item data-heading=\"${1:Basic 1}\">",
+      "\t<oui-tabs-item heading=\"${1:Lorem ipsum}\">",
       "\t\t<p>${2:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet congue urna. Praesent ultricies id ex convallis dictum. Pellentesque malesuada faucibus consectetur. Quisque vehicula tincidunt leo, quis auctor nisi luctus quis. Etiam purus lectus, placerat vitae vehicula at, molestie nec erat. Duis enim odio, maximus at laoreet in, finibus nec mi. Nam ultrices, lacus vitae egestas volutpat, libero odio gravida turpis, vitae dapibus ex mi nec quam. Pellentesque a tempor nibh.}</p>",
       "\t</oui-tabs-item>",
-      "\t<oui-tabs-item data-heading=\"${3:Basic 2}\">",
+      "\t<oui-tabs-item heading=\"${3:Dolor sit amet}\">",
       "\t\t<p>${4:Proin egestas fermentum lectus nec euismod. Vivamus eu congue dui. Pellentesque sit amet pellentesque quam. Morbi posuere sem nec rutrum placerat. Vestibulum porttitor arcu eu risus tempor consectetur. Fusce aliquam bibendum aliquet. Morbi semper egestas iaculis. Ut sit amet sem et neque porta cursus pellentesque nec augue. Nullam semper in metus et luctus. Nunc molestie non ipsum a consequat. Etiam pellentesque laoreet lectus ut luctus. Nulla maximus, leo a mattis gravida, ligula felis vulputate libero, vitae fringilla nibh mauris nec dui. Fusce sed massa at arcu euismod dictum id sit amet lorem. Aliquam sed viverra sem, quis vehicula ligula. Vivamus blandit varius condimentum.}</p>",
       "\t</oui-tabs-item>",
-      "\t<oui-tabs-item data-heading=\"${5:Basic 3}\">",
+      "\t<oui-tabs-item heading=\"${5:Consectetur adipiscing elit}\">",
       "\t\t<p>${6:Duis egestas nulla at euismod semper. Nullam bibendum auctor viverra. Sed posuere neque nulla, id cursus nisi molestie vel. Nulla ornare elit sit amet congue faucibus. Aliquam eget lorem id justo ornare pretium in sit amet lectus. Sed maximus odio id porttitor rhoncus. Quisque pulvinar mauris ut sapien dictum, ultrices fermentum orci efficitur. Cras nec auctor ante. Aliquam ornare eleifend neque, at condimentum lacus aliquet elementum. Mauris mattis porttitor tortor vel vehicula. Phasellus venenatis nibh nec viverra sollicitudin. Ut lobortis mattis mauris, vel euismod nibh faucibus a.}</p>",
       "\t</oui-tabs-item>",
       "</oui-tabs>"
     ],
     "description": "oui-tabs"
+  },
+  "oui-tabs-with-subheadings": {
+    "scope": "html",
+    "prefix": "oui-tabs-with-subheadings",
+    "body": [
+      "<oui-tabs>",
+      "\t<oui-tabs-item heading=\"${1:Lorem ipsum}\">",
+      "\t\t<p>${2:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet congue urna. Praesent ultricies id ex convallis dictum. Pellentesque malesuada faucibus consectetur. Quisque vehicula tincidunt leo, quis auctor nisi luctus quis. Etiam purus lectus, placerat vitae vehicula at, molestie nec erat. Duis enim odio, maximus at laoreet in, finibus nec mi. Nam ultrices, lacus vitae egestas volutpat, libero odio gravida turpis, vitae dapibus ex mi nec quam. Pellentesque a tempor nibh.}</p>",
+      "\t</oui-tabs-item>",
+      "\t<oui-tabs-item heading=\"${3:Dolor sit amet}\" subheading=\"${4:Proin egestas}\">",
+      "\t\t<p>${5:Proin egestas fermentum lectus nec euismod. Vivamus eu congue dui. Pellentesque sit amet pellentesque quam. Morbi posuere sem nec rutrum placerat. Vestibulum porttitor arcu eu risus tempor consectetur. Fusce aliquam bibendum aliquet. Morbi semper egestas iaculis. Ut sit amet sem et neque porta cursus pellentesque nec augue. Nullam semper in metus et luctus. Nunc molestie non ipsum a consequat. Etiam pellentesque laoreet lectus ut luctus. Nulla maximus, leo a mattis gravida, ligula felis vulputate libero, vitae fringilla nibh mauris nec dui. Fusce sed massa at arcu euismod dictum id sit amet lorem. Aliquam sed viverra sem, quis vehicula ligula. Vivamus blandit varius condimentum.}</p>",
+      "\t</oui-tabs-item>",
+      "\t<oui-tabs-item heading=\"${6:Consectetur adipiscing elit}\" subheading=\"${7:Promotion}\" variant=\"${8:promotion}\">",
+      "\t\t<p>${9:Duis egestas nulla at euismod semper. Nullam bibendum auctor viverra. Sed posuere neque nulla, id cursus nisi molestie vel. Nulla ornare elit sit amet congue faucibus. Aliquam eget lorem id justo ornare pretium in sit amet lectus. Sed maximus odio id porttitor rhoncus. Quisque pulvinar mauris ut sapien dictum, ultrices fermentum orci efficitur. Cras nec auctor ante. Aliquam ornare eleifend neque, at condimentum lacus aliquet elementum. Mauris mattis porttitor tortor vel vehicula. Phasellus venenatis nibh nec viverra sollicitudin. Ut lobortis mattis mauris, vel euismod nibh faucibus a.}</p>",
+      "\t</oui-tabs-item>",
+      "</oui-tabs>"
+    ],
+    "description": "oui-tabs-with-subheadings"
   },
   "oui-textarea": {
     "scope": "html",
@@ -642,24 +1353,60 @@
     "body": [
       "<oui-textarea",
       "\tdisabled=\"\\$ctrl.${1:disabled}\"",
-      "\tdata-model=\"\\$ctrl.${2:model}\"",
-      "\tdata-on-change=\"\\$ctrl.${3:onChange(modelValue)}\"",
+      "\tmodel=\"\\$ctrl.${2:model}\"",
+      "\ton-change=\"\\$ctrl.${3:onChange(modelValue)}\"",
       "\tplaceholder=\"${4:Please insert your text…}\"",
       "\treadonly=\"\\$ctrl.${5:readonly}\"",
-      "\trows=\"${6:7}\">",
+      "\trows=\"${6:5}\">",
       "</oui-textarea>"
     ],
     "description": "oui-textarea"
+  },
+  "oui-textarea-with-maxlength": {
+    "scope": "html",
+    "prefix": "oui-textarea-with-maxlength",
+    "body": [
+      "<oui-textarea",
+      "\tdisabled=\"\\$ctrl.${1:disabled}\"",
+      "\tmodel=\"\\$ctrl.${2:model}\"",
+      "\ton-change=\"\\$ctrl.${3:onChange(modelValue)}\"",
+      "\tmaxlength=\"${4:250}\"",
+      "\tplaceholder=\"${5:Please insert your text…}\"",
+      "\trows=\"${6:5}\">",
+      "</oui-textarea>"
+    ],
+    "description": "oui-textarea-with-maxlength"
+  },
+  "oui-textarea-inline": {
+    "scope": "html",
+    "prefix": "oui-textarea-inline",
+    "body": [
+      "<oui-textarea",
+      "\tdisabled=\"\\$ctrl.${1:disabled}\"",
+      "\tmodel=\"\\$ctrl.${2:model}\"",
+      "\tplaceholder=\"${3:Please insert your text…}\"",
+      "\trows=\"${4:5}\"",
+      "\tinline>",
+      "</oui-textarea>"
+    ],
+    "description": "oui-textarea-inline"
   },
   "oui-tile": {
     "scope": "html",
     "prefix": "oui-tile",
     "body": [
       "<oui-tile",
-      "\tdata-heading=\"${1:An awesome title for an awesome tile}\"",
-      "\tdata-description=\"${2:Lorem ipsum dolor sit amet, consectetur adipiscing elit.}\"",
-      "\tdata-loading=\"\\$ctrl.${3:loading}\">",
-      "\t${4:Sed tempus sapien erat, et molestie magna tristique non. Sed tincidunt eu augue tempor consectetur. Nullam iaculis, nibh mollis vulputate elementum, neque est iaculis nisi, et gravida turpis erat non dui. Nunc eget tortor et enim interdum euismod sed eget purus. Integer in metus ultrices, ultricies lacus in, fermentum nisi. Cras sed neque id dui fermentum faucibus. Mauris mollis arcu justo, eget convallis massa volutpat ac.}",
+      "\theading=\"${1:An awesome title for an awesome tile}\"",
+      "\tdescription=\"${2:Lorem ipsum dolor sit amet, consectetur adipiscing elit.}\"",
+      "\tloading=\"\\$ctrl.${3:loading}\">",
+      "\t${4:Sed tempus sapien erat, et molestie magna tristique non.",
+      "\tSed tincidunt eu augue tempor consectetur. Nullam iaculis,",
+      "\tnibh mollis vulputate elementum, neque est iaculis nisi,",
+      "\tet gravida turpis erat non dui. Nunc eget tortor et enim",
+      "\tinterdum euismod sed eget purus. Integer in metus ultrices,",
+      "\tultricies lacus in, fermentum nisi. Cras sed neque id dui",
+      "\tfermentum faucibus. Mauris mollis arcu justo, eget convallis",
+      "\tmassa volutpat ac.}",
       "</oui-tile>"
     ],
     "description": "oui-tile"
@@ -670,13 +1417,21 @@
     "body": [
       "<oui-timepicker",
       "\tdisabled=\"\\$ctrl.${1:disabled}\"",
-      "\tdata-model=\"\\$ctrl.${2:model}\"",
-      "\tdata-on-change=\"\\$ctrl.${3:onChange(modelValue)}\"",
-      "\tdata-on-close=\"\\$ctrl.${4:onClose(modelValue)}\"",
-      "\tdata-on-open=\"\\$ctrl.${5:onOpen(modelValue)}\"",
+      "\tmodel=\"\\$ctrl.${2:model}\"",
+      "\ton-change=\"\\$ctrl.${3:onChange(modelValue)}\"",
+      "\ton-close=\"\\$ctrl.${4:onClose(modelValue)}\"",
+      "\ton-open=\"\\$ctrl.${5:onOpen(modelValue)}\"",
       "\tplaceholder=\"${6:HH:MM}\">",
       "</oui-timepicker>"
     ],
     "description": "oui-timepicker"
+  },
+  "oui-timepicker-inline": {
+    "scope": "html",
+    "prefix": "oui-timepicker-inline",
+    "body": [
+      "<oui-timepicker model=\"\\$ctrl.${1:inlineModel}\" inline></oui-timepicker>"
+    ],
+    "description": "oui-timepicker-inline"
   }
 }
