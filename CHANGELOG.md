@@ -1,3 +1,17 @@
+# [3.0.0](https://github.com/antleblanc/vscode-ovh-ui-kit-snippets/compare/v2.0.1...v3.0.0) (2020-08-12)
+
+
+### Bug Fixes
+
+* **snippets:** replace OVH by OVHcloud ([193e822](https://github.com/antleblanc/vscode-ovh-ui-kit-snippets/commit/193e8227976d2226d31b1a4bca6a2351fbef319b))
+
+
+### Features
+
+* **snippets:** upgrade to v4 ([4a167e9](https://github.com/antleblanc/vscode-ovh-ui-kit-snippets/commit/4a167e91586ba8fec744d0a546d3da904ce016c8))
+
+
+
 ## [2.0.1](https://github.com/antleblanc/vscode-ovh-ui-kit-snippets/compare/v2.0.0...v2.0.1) (2019-10-20)
 
 
