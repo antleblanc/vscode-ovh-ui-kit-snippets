@@ -63,9 +63,9 @@
     "body": [
       "<oui-back-button",
       "\thref=\"${1:#}\"",
-      "\taria-label=\"${2:Aria label for heading}\"",
-      "\ton-click=\"\\$ctrl.${3:onClick()}\">",
-      "\t{{ \\$ctrl.${4:text} }}",
+      "\tprevious-page=\"{{ \\$ctrl.${2:previousPage} }}\"",
+      "\taria-label=\"${3:Aria label for heading}\"",
+      "\ton-click=\"\\$ctrl.${4:onClick()}\">",
       "</oui-back-button>"
     ],
     "description": "oui-back-button"
