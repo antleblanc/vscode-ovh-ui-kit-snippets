@@ -956,6 +956,21 @@
     ],
     "description": "oui-numeric-limits"
   },
+  "oui-numeric-step": {
+    "scope": "html",
+    "prefix": "oui-numeric-step",
+    "body": [
+      "<oui-numeric",
+      "\tmin=\"\\$ctrl.${1:min}\"",
+      "\tmax=\"\\$ctrl.${2:max}\"",
+      "\tmodel=\"\\$ctrl.${3:model}\"",
+      "\tdisabled=\"\\$ctrl.${4:disabled}\"",
+      "\tstep=\"\\$ctrl.${5:step}\"",
+      "\ton-change=\"\\$ctrl.${6:onChange(modelValue)}\">",
+      "</oui-numeric>"
+    ],
+    "description": "oui-numeric-step"
+  },
   "oui-pagination": {
     "scope": "html",
     "prefix": "oui-pagination",
