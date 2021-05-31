@@ -70,6 +70,19 @@
     ],
     "description": "oui-back-button"
   },
+  "oui-back-button-default": {
+    "scope": "html",
+    "prefix": "oui-back-button-default",
+    "body": [
+      "<oui-back-button",
+      "\thref=\"${1:#}\"",
+      "\tprevious-page=\"{{ \\$ctrl.${2:previousPage} }}\"",
+      "\taria-label=\"${3:Aria label for heading}\"",
+      "\ton-click=\"\\$ctrl.${4:onClick()}\">",
+      "</oui-back-button>"
+    ],
+    "description": "oui-back-button-default"
+  },
   "oui-badge-default": {
     "scope": "html",
     "prefix": "oui-badge-default",
