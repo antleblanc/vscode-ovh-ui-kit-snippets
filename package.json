@@ -12,7 +12,7 @@
     "url": "https://github.com/antleblanc/vscode-ovh-ui-kit-snippets/issues"
   },
   "homepage": "https://github.com/antleblanc/vscode-ovh-ui-kit-snippets#readme",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "engines": {
     "vscode": "^1.30.0"
   },
