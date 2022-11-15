@@ -20,7 +20,6 @@ $ ext install antleblanc.vscode-ovh-ui-kit-snippets
 ## Related
 
 * [ovh-ui-kit](https://github.com/ovh/ovh-ui-kit) - OVHcloud UI Kit - Master UI Framework
-* [atom-ovh-ui-kit-snippets](https://github.com/antleblanc/atom-ovh-ui-kit-snippets) - Collection of OVHcloud UI Kit snippets for Atom
 * [sublime-ovh-ui-kit-snippets](https://github.com/antleblanc/sublime-ovh-ui-kit-snippets) - Collection of OVHcloud UI Kit snippets for Sublime Text
 
 ## License
